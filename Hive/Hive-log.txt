@@ -1,0 +1,12 @@
+Hive
+donwload log file
+https://www.microsoft.com/en-us/download/details.aspx?id=37003
+
+Subir fichero, llamarlo sample.log
+
+hdfs dfs -put sample.log /input
+
+
+CREATE EXTERNAL TABLE log4jLogs (t1 string, t2 string, t3 string, t4 string, t5 string, t6 string, t7 string)
+ROW FORMAT DELIMITED FIELDS TERMINATED BY ' '
+STORED AS TEXTFILE LOCATION '/home/info/';
