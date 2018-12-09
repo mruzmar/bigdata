@@ -1,0 +1,22 @@
+echo "Madrid Barcelona Bilbao Madrid Barcelona Cádiz Almería Madrid Coruña" | mapper.py
+
+echo "Madrid Barcelona Bilbao Madrid Barcelona Cádiz Almería Madrid Coruña" | mapper.py | sort -k1,1 | reducer.py
+
+
+Conseguir un fichero con cierta extensión y ejecutar:
+
+cat xxxxx.txt | mapper.py
+
+Ejecutando el job en Hadoop
+
+Se puede utilizar libros de gutenberg.org
+
+dfs -copyFromLocal fichero /destino
+
+/usr/local/hadoop$ bin/hadoop jar contrib/streaming/hadoop-*streaming*.jar \
+-file /home/hduser/mapper.py    -mapper /home/hduser/mapper.py \
+-file /home/hduser/reducer.py   -reducer /home/hduser/reducer.py \
+-input /user/hduser/gutenberg/* -output /user/hduser/gutenberg-output
+
+
+
