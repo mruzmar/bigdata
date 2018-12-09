@@ -1,0 +1,13 @@
+https://raw.githubusercontent.com/datasets/exchange-rates/master/data/daily.csv
+
+python mapper.py daily.csv | python reducer.py
+
+
+bin/hadoop jar /usr/local/Cellar/hadoop/3.1.0/libexec/share/hadoop/tools/lib/hadoop-*streaming*.jar \
+-file /<path_to_mapper>/mapper.py \
+-mapper /<path_to_mapper>/mapper.py \
+-file /<path_to_reducer>/reducer.py  \
+-reducer /<path_to_reducer>/reducer.py  \
+-input daily/daily.csv \
+-output daily/output
+

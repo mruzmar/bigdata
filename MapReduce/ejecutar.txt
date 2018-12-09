@@ -19,4 +19,4 @@ dfs -copyFromLocal fichero /destino
 -input /user/hduser/gutenberg/* -output /user/hduser/gutenberg-output
 
 
-
+hdfs dfs -catoutput/*
