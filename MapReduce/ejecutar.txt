@@ -26,4 +26,4 @@ hadoop jar /usr/lib/hadoop-mapreduce/hadoop-streaming.jar \
 -input ./analisis/libro.txt -output ./analisis/gutenberg-output
 
 
-hdfs dfs -catoutput/*
+ hdfs dfs -cat ./analisis/gutenberg-output/part-00000
