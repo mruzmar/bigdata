@@ -1,5 +1,6 @@
 #!/usr/bin/env python
-"""POrograma mapper.py"""
+# -*- coding: utf-8 -*-
+"""Programa mapper.py"""
 
 import sys
 

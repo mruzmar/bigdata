@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+# -*- coding: utf-8 -*-
 """Programa reducer.py"""
 
 from operator import itemgetter
