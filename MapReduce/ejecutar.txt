@@ -1,6 +1,6 @@
-echo "Madrid Barcelona Bilbao Madrid Barcelona Cádiz Almería Madrid Coruña" | mapper.py
+echo "Madrid Barcelona Bilbao Madrid Barcelona Cádiz Almería Madrid Coruña" | python mapper.py
 
-echo "Madrid Barcelona Bilbao Madrid Barcelona Cádiz Almería Madrid Coruña" | mapper.py | sort -k1,1 | reducer.py
+echo "Madrid Barcelona Bilbao Madrid Barcelona Cádiz Almería Madrid Coruña" | python mapper.py | sort -k1,1 | python reducer.py
 
 
 Conseguir un fichero con cierta extensión y ejecutar:
@@ -11,12 +11,19 @@ Ejecutando el job en Hadoop
 
 Se puede utilizar libros de gutenberg.org
 
-dfs -copyFromLocal fichero /destino
+Creamos el directorio de trabajo
 
-/usr/local/hadoop$ bin/hadoop jar contrib/streaming/hadoop-*streaming*.jar \
--file /home/hduser/mapper.py    -mapper /home/hduser/mapper.py \
--file /home/hduser/reducer.py   -reducer /home/hduser/reducer.py \
--input /user/hduser/gutenberg/* -output /user/hduser/gutenberg-output
+hdfs dfs -mkdir -p ./analisis
+
+
+hdfs dfs -put libro.txt ./analisis
+
+hdfs dfs -ls ./analisis
+
+hadoop jar /usr/lib/hadoop-mapreduce/hadoop-streaming.jar \
+-file ./mapper.py    -mapper ./mapper.py \
+-file ./reducer.py   -reducer ./reducer.py \
+-input ./analisis/libro.txt -output ./analisis/gutenberg-output
 
 
 hdfs dfs -catoutput/*
