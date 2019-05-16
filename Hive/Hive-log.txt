@@ -1,12 +1,27 @@
 Hive
-donwload log file
-https://www.microsoft.com/en-us/download/details.aspx?id=37003
+Descargar fichero de: https://download.microsoft.com/download/7/F/3/7F35E2C0-B84F-4B45-A9F2-2A888D51C1D9/sample.log
+
+wget https://download.microsoft.com/download/7/F/3/7F35E2C0-B84F-4B45-A9F2-2A888D51C1D9/sample.log
+
+Del sitio de fuente de origen: https://www.microsoft.com/en-us/download/details.aspx?id=37003
 
 Subir fichero, llamarlo sample.log
 
-hdfs dfs -put sample.log /input
+hdfs dfs -mkdir -p /datalake/logs/mobile/application1
+hdfs dfs -put sample.log /datalake/logs/mobile/application1/
 
+
+
+Nos introducimos en la consolo de hive, escribiendo hive
+>hive
+
+O si utilizamos Cloudera, a través de Hue, en consola
 
 CREATE EXTERNAL TABLE log4jLogs (t1 string, t2 string, t3 string, t4 string, t5 string, t6 string, t7 string)
 ROW FORMAT DELIMITED FIELDS TERMINATED BY ' '
 STORED AS TEXTFILE LOCATION '/home/info/';
+
+LOAD DATA INPATH '/datalake/logs/mobile/application1/sample.log' OVERWRITE INTO TABLE log4jLogs; 
+
+
+SELECT * FROM log4jLogs WHERE t4 = '[ERROR]';
