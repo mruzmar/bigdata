@@ -1,0 +1,27 @@
+# instalar la utilidad wget para poder descargar de Internet contenido
+sudo yum install wget
+                 
+# con wget descargamos contenido de la bibliotea Gutenberg - Twain and Cooper
+wget -U firefox http://www.gutenberg.org/cache/epub/76/pg76.txt
+wget -U firefox http://www.gutenberg.org/cache/epub/3285/pg3285.txt
+                 
+# Movemos el fichero
+# DS para Deerslayer
+# HF para  Huckleberry Finn
+mv pg3285.txt DS.txt
+mv pg76.txt HF.txt
+                 
+# Creamos nuestro directorio HdFS
+hadoop fs -mkdir /user/DataLake
+                 
+# Añadimos el fichero al Data Lake
+hadoop fs -put HF.txt /user/DataLake/
+# Comprobamos si el fichero se encuentra en el directorio
+hadoop fs -ls /user/DataLake/                 
+                 
+
+                 
+
+                 
+hadoop fs -put DS.txt /user/DataLake/
+                 
