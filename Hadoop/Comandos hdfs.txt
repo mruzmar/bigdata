@@ -12,7 +12,7 @@ mv pg3285.txt DS.txt
 mv pg76.txt HF.txt
                  
 # Creamos nuestro directorio HdFS
-hadoop fs -mkdir /user/DataLake
+hadoop fs -mkdir -p  /user/DataLake
                  
 # Añadimos el fichero al Data Lake
 hadoop fs -put HF.txt /user/DataLake/
