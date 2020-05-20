@@ -8,6 +8,9 @@ access_token_secret = "eaFWhbH2Mn1trxlYoKlLZsk3nzkk4wsiaFTyIkDbLEYob"
 consumer_key = "C1voYrjnzAcwjRU1k8SmL72vK"
 consumer_secret = "Uvk3ljIL8duuLM7XxLXrlXBBEkHDl040dxgJox8p9pdJVcxRjh"
 
+# max twitters to get
+num_results = 50   
+
 from twitter import *
 
 t = Twitter(
