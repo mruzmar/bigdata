@@ -25,6 +25,6 @@ result_count = 0
 last_id = None
 while result_count <  num_results:
 
-    query = twitter.search.tweets(q = "covid", , count = 100, max_id = last_id)
+    query = twitter.search.tweets(q = "covid",  count = 100, max_id = last_id)
     for result in query["statuses"]:
         print str(result)
