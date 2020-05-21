@@ -1,66 +1,58 @@
-A. Crear Base de datos
-------------------
-create database retail;
 
-B. Seleccionar Base de dastos
-------------------
-use retail;
+#Creamos tabla temporal
+CREATE TABLE twitter_data(twitter_val STRING);
 
-C. Crear tabla que contendrá los datos transaccionales
--------------------------------------------------
-create table txnrecords(txnno INT, txndate STRING, custno INT, amount DOUBLE, 
-category STRING, product STRING, city STRING, state STRING, spendby STRING)
-row format delimited
-fields terminated by ','
-stored as textfile;
+#Hay que cargar el fichero https://raw.githubusercontent.com/mruzmar/bigdata/master/Hive/practica-drivers/drivers.csv en HDFS en la ruta /home/info/drivers.csv
 
-D. Cargamos los datos en la tabla
-------------------------------
-LOAD DATA LOCAL INPATH 'data.txt' OVERWRITE INTO TABLE txnrecords;
+LOAD DATA INPATH '/home/info/drivers.csv' OVERWRITE INTO TABLE temp_drivers;
 
-E. Describe el esquema de la tabla
----------------------------------------------
-describe txnrecords;
+select * from temp_drivers limit 100;
 
-F. Conteo del número de registros cargados en la tabla
--------------------------
-select count(*) from txnrecords;
-
-G. Suma el total de la cantidad gastada por categoría de productos
---------------------------------------------------
-select category, sum(amount) from txnrecords group by category;
-
-H. Top 10 clientes
---------------------
-select custno, sum(amount) from txnrecords group by custno limit 10;
-
-I. Crear una tabla particionada
----------------------------
-create table txnrecsByCat(txnno INT, txndate STRING, custno INT, amount DOUBLE,
-product STRING, city STRING, state STRING, spendby STRING)
-partitioned by (category STRING)
-clustered by (state) INTO 10 buckets
-row format delimited
-fields terminated by ','
-stored as textfile;
-
-J. Configurar Hive para partimir particiones
--------------------------------------
-
-set hive.exec.dynamic.partition.mode=nonstrict;
-set hive.exec.dynamic.partition=true;
-set hive.enforce.bucketing=true;
-
-K. Cargar datos en la tabla particionada
-----------------------------------
-from txnrecords txn INSERT OVERWRITE TABLE txnrecsByCat PARTITION(category)
-select txn.txnno, txn.txndate,txn.custno, txn.amount,txn.product,txn.city,txn.state,
-txn.spendby, txn.category DISTRIBUTE BY category;
+CREATE TABLE drivers (driverId INT, name STRING, ssn BIGINT, location STRING,
+certified STRING, wageplan STRING);
 
 
+insert overwrite table drivers
+SELECT
+regexp_extract(col_value, '^(?:([^,]*),?){1}', 1) driverId,
+Ejemplo Hive
+regexp_extract(col_value, '^(?:([^,]*),?){2}', 1) name,
+regexp_extract(col_value, '^(?:([^,]*),?){3}', 1) ssn,
+regexp_extract(col_value, '^(?:([^,]*),?){4}', 1) location,
+regexp_extract(col_value, '^(?:([^,]*),?){5}', 1) certified,
+regexp_extract(col_value, '^(?:([^,]*),?){6}', 1) wageplan
+from temp_drivers;
 
 
+select * from temp_drivers limit 100;
 
+
+CREATE TABLE temp_timesheet (col_value string);
+
+#Hay que cargar el fichero https://github.com/mruzmar/bigdata/blob/master/Hive/practica-drivers/timesheet.csv en HDFS en la ruta /home/info/
+
+LOAD DATA INPATH '/home/info/timesheet.csv' OVERWRITE INTO TABLE
+temp_timesheet;
+
+
+select * from temp_timesheet limit 100;
+
+
+CREATE TABLE timesheet (driverId INT, week INT, hours_logged INT , miles_logged INT);
+insert overwrite table timesheet
+SELECT
+regexp_extract(col_value, '^(?:([^,]*),?){1}', 1) driverId,
+regexp_extract(col_value, '^(?:([^,]*),?){2}', 1) week,
+regexp_extract(col_value, '^(?:([^,]*),?){3}', 1) hours_logged,
+regexp_extract(col_value, '^(?:([^,]*),?){4}', 1) miles_logged
+from temp_timesheet;
+
+
+select * from temp_timesheet limit 100;
+
+
+SELECT driverId, sum(hours_logged), sum(miles_logged) FROM timesheet GROUP BY
+driverId;
 
 
 
