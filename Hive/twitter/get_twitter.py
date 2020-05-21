@@ -23,7 +23,7 @@ csvwriter = csv.writer(csvfile)
 
 row = [ "user", "text", "latitude", "longitude" ]
 
-row = "user"+"|"+"text"
+row = ["user","text"]
 csvwriter.writerow(row)
 
 # Busqueda geo en twitter
@@ -51,7 +51,7 @@ import json
 result_count = 0
 
 
-query = twitter.search.tweets(q = "covid", count=1)
+query = twitter.search.tweets(q = "covid", lang="es", count=100)
 
 #-----------------------------------------------------------------------
 # How long did this query take?
@@ -63,10 +63,23 @@ query = twitter.search.tweets(q = "covid", count=1)
 #-----------------------------------------------------------------------
 
 
-with open('data.json', 'w') as f:
-        for result in query["statuses"]:
-            #print(query["statuses"])
-            json.dump(result, f)
+for result in query["statuses"]:
+    print str(result)
+    user = result["user"]["screen_name"]
+    text = result["text"]
+    text = text.encode('ascii', 'replace')        
+    #latitude = result["geo"]["coordinates"][0]
+    #longitude = result["geo"]["coordinates"][1]
+    #-----------------------------------------------------------------------
+    # Escribimos al fichero csv
+    #-----------------------------------------------------------------------
+    row = [user,text]
+    #row = [ user, text, latitude, longitude ]    
+    csvwriter.writerow(row)
+    result_count += 1
+
+
+print "Obtenemos %d resultados" % result_count    
 
 
 
