@@ -1,0 +1,61 @@
+PRÁCTICAS HIVE
+
+Dentro del departamento de RRHH nos pasan su base de datos de empleados y sueldos de la central de NYC
+
+Nos solicitan que hagamos un análisis de dichos datos y que podamos aportar valor sobre los mismos.
+
+En este caso vamos a utilizar HIVE como herramienta de análisis y para obtener resultados de las consultas sobre dichos datos.
+
+
+Creación de tablas
+
+
+create external table employee (
+	    employee_id INT,
+	    birthday DATE,
+	    first_name STRING,
+	    family_name STRING,
+	    gender CHAR(1),
+	    work_day DATE)
+row format serde 'org.apache.hadoop.hive.serde2.OpenCSVSerde'
+with serdeproperties (
+	    "separatorChar" = ",",
+	    "quoteChar"     = "'"
+)
+stored as textfile
+location '/employee/';
+
+create external table salary (
+	    employee_id INT,
+	    salary INT,
+	    start_date DATE,
+	    end_date DATE)
+row format serde 'org.apache.hadoop.hive.serde2.OpenCSVSerde'
+with serdeproperties (
+	    "separatorChar" = ",",
+	    "quoteChar"     = "'"
+)
+stored as textfile
+location '/salary/';
+
+Querys
+Explica qué datos se obtienen con estas querys
+
+
+select e.first_name, e.family_name, avg(s.salary) as avg_salary from
+    employee as e join salary as s on (e.employee_id == s.employee_id)
+        group by e.first_name, e.family_name limit 5;
+
+select e.gender, avg(s.salary) as avg_salary from
+    employee as e join salary as s on (e.employee_id == s.employee_id)
+        group by e.gender;
+
+select e.first_name, e.family_name, avg(s.salary) as avg_salary from
+    employee as e join salary as s on (e.employee_id == s.employee_id)
+        group by e.first_name, e.family_name order by avg_salary limit 10;
+
+select * from employee order by work_day asc limit 10;
+
+select * from employee order by birthday asc limit 5;
+
+select first_name, family_name, work_day from employee where work_day >= '1990-01-01' and work_day <= '1990-01-31'
