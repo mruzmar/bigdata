@@ -1,0 +1,67 @@
+A. Crear Base de datos
+------------------
+create database retail;
+
+B. Seleccionar Base de dastos
+------------------
+use retail;
+
+C. Crear tabla que contendrá los datos transaccionales
+-------------------------------------------------
+create table txnrecords(txnno INT, txndate STRING, custno INT, amount DOUBLE, 
+category STRING, product STRING, city STRING, state STRING, spendby STRING)
+row format delimited
+fields terminated by ','
+stored as textfile;
+
+D. Cargamos los datos en la tabla
+------------------------------
+LOAD DATA LOCAL INPATH 'data.txt' OVERWRITE INTO TABLE txnrecords;
+
+E. Describe el esquema de la tabla
+---------------------------------------------
+describe txnrecords;
+
+F. Conteo del número de registros cargados en la tabla
+-------------------------
+select count(*) from txnrecords;
+
+G. Suma el total de la cantidad gastada por categoría de productos
+--------------------------------------------------
+select category, sum(amount) from txnrecords group by category;
+
+H. Top 10 clientes
+--------------------
+select custno, sum(amount) from txnrecords group by custno limit 10;
+
+I. Crear una tabla particionada
+---------------------------
+create table txnrecsByCat(txnno INT, txndate STRING, custno INT, amount DOUBLE,
+product STRING, city STRING, state STRING, spendby STRING)
+partitioned by (category STRING)
+clustered by (state) INTO 10 buckets
+row format delimited
+fields terminated by ','
+stored as textfile;
+
+J. Configurar Hive para partimir particiones
+-------------------------------------
+
+set hive.exec.dynamic.partition.mode=nonstrict;
+set hive.exec.dynamic.partition=true;
+set hive.enforce.bucketing=true;
+
+K. Cargar datos en la tabla particionada
+----------------------------------
+from txnrecords txn INSERT OVERWRITE TABLE txnrecsByCat PARTITION(category)
+select txn.txnno, txn.txndate,txn.custno, txn.amount,txn.product,txn.city,txn.state,
+txn.spendby, txn.category DISTRIBUTE BY category;
+
+
+
+
+
+
+
+
+
