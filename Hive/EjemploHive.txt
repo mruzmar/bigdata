@@ -1,0 +1,118 @@
+# Hive (http://hive.apache.org/)
+# Hive es un sistema de Data Warehouse para Hadoop que
+# facilita el uso de la agregación de los datos, ad-hoc
+# queries, y el análisis de grandes datasets almacenados en
+# Hadoop. Hive proporciona métodos de consulta de los
+# datos usando un lenguaje parecido al SQL, llamado HiveQL.
+
+
+# Ejemplo 1. Trabajar con el Json de elementos de twitter
+
+
+hdfs dfs -mkdir -p /home/twitter
+hdfs dfs -put data.json /home/twitter
+
+# Creamos una tabla en la que se recopilará cada uno de los tweets que se han recuperado
+CREATE TABLE twitter_data(twitter_val STRING);
+
+# Cargamos los twetts que se encuentran en el fichero json en la tabla creada anteriormente
+LOAD DATA INPATH "/home/twitter/data.json" OVERWRITE INTO TABLE twitter_data;
+
+# Mostramos las tablas que existen
+SHOW TABLES;
+
+# Mostramos la estructura de la tabla
+DESCRIBE twitter_data;
+
+
+# Seleccionamos los primeros 5 elementos de la tabla
+SELECT * from twitter_data LIMIT 5;
+
+
+# Seleccionamos la fecha del tweet y el texto, como el tweet se encuentra en formato JSON debemos utilizar una funcionación para obtener los valroes
+select get_json_object(twitter_data.twitter_val, "$.created_at"),
+get_json_object(twitter_data.twitter_val, "$.text") from twitter_data;
+
+
+
+# Ejemplo 2. Caso Uber, conductores
+
+# Descagamos el fichero de conductores
+wget https://raw.githubusercontent.com/mruzmar/bigdata/master/Hive/drivers.csv
+hdfs dfs -mkdir -p /home/datosHive
+hdfs dfs -put drivers.csv /home/datosHive
+
+
+# Creamos tabla temporal para cargar datos iniciales
+CREATE TABLE temp_drivers(col_value STRING);
+
+
+# Cargamos el fichero en la tabla temporal
+LOAD DATA INPATH '/home/datosHive/drivers.csv' OVERWRITE INTO TABLE temp_drivers;
+
+# Comprobamos que se han cargado correctamente
+select * from temp_drivers limit 100;
+
+
+# Creamos tabla final de conductores
+CREATE TABLE drivers (driverId INT, name STRING, ssn BIGINT, location STRING,
+certified STRING, wageplan STRING);
+
+
+# Insertamos en la tabla final de conductores, partiendo de la tabla temporal
+insert overwrite table drivers
+SELECT
+regexp_extract(col_value, '^(?:([^,]*),?){1}', 1) driverId,
+regexp_extract(col_value, '^(?:([^,]*),?){2}', 1) name,
+regexp_extract(col_value, '^(?:([^,]*),?){3}', 1) ssn,
+regexp_extract(col_value, '^(?:([^,]*),?){4}', 1) location,
+regexp_extract(col_value, '^(?:([^,]*),?){5}', 1) certified,
+regexp_extract(col_value, '^(?:([^,]*),?){6}', 1) wageplan
+from temp_drivers;
+
+
+# Comprobamos que se han cargado datos en la tabla
+select * from drivers limit 100;
+
+select driverId, name, ssn, location,certified, wageplan from drivers;
+
+ 
+
+# Descagamos el fichero de horas
+wget https://raw.githubusercontent.com/mruzmar/bigdata/master/Hive/timesheet.csv
+hdfs dfs -mkdir -p /home/datosHive
+hdfs dfs -put timesheet.csv /home/datosHive 
+# Creamos tabla temporal
+CREATE TABLE temp_timesheet (col_value string);
+
+# Cargamos datos en la tabla temporal
+LOAD DATA INPATH '/home/datosHive/timesheet.csv' OVERWRITE INTO TABLE
+temp_timesheet;
+
+
+select * from temp_timesheet limit 100;
+
+# Creamos tabla final
+CREATE TABLE timesheet (driverId INT, week INT, hours_logged INT , miles_logged INT);
+
+
+# cargamos datos en la tabla final
+insert overwrite table timesheet
+SELECT
+regexp_extract(col_value, '^(?:([^,]*),?){1}', 1) driverId,
+regexp_extract(col_value, '^(?:([^,]*),?){2}', 1) week,
+regexp_extract(col_value, '^(?:([^,]*),?){3}', 1) hours_logged,
+regexp_extract(col_value, '^(?:([^,]*),?){4}', 1) miles_logged
+from temp_timesheet;
+select * from temp_timesheet limit 100;
+
+
+# Analizando datos, ¿qué se está haciendo?
+SELECT driverId, sum(hours_logged), sum(miles_logged) FROM timesheet GROUP BY
+driverId;
+
+CREATE VIEW IF NOT EXISTS total 
+AS SELECT driverId, sum(hours_logged), sum(miles_logged) FROM timesheet GROUP BY
+driverId;
+
+select * from total horas RIGHT OUTER JOIN drivers conductores ON horas.driverId=conductores.driverId;
