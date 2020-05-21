@@ -1,0 +1,37 @@
+# Hive (http://hive.apache.org/)
+# Hive es un sistema de Data Warehouse para Hadoop que
+# facilita el uso de la agregación de los datos, ad-hoc
+# queries, y el análisis de grandes datasets almacenados en
+# Hadoop. Hive proporciona métodos de consulta de los
+# datos usando un lenguaje parecido al SQL, llamado HiveQL.
+
+
+# Ejemplo 1. Trabajar con el Json de elementos de twitter
+# Ejecutar https://raw.githubusercontent.com/mruzmar/bigdata/master/Hive/twitter/get_twitter.py para obtener el fichero data.json
+
+hdfs dfs -mkdir -p /home/twitter
+hdfs dfs -put data.json /home/twitter
+
+# Creamos una tabla en la que se recopilará cada uno de los tweets que se han recuperado
+CREATE TABLE twitter_data(twitter_val STRING);
+
+# Cargamos los twetts que se encuentran en el fichero json en la tabla creada anteriormente
+LOAD DATA INPATH "/home/twitter/data.json" OVERWRITE INTO TABLE twitter_data;
+
+# Mostramos las tablas que existen
+SHOW TABLES;
+
+# Mostramos la estructura de la tabla
+DESCRIBE twitter_data;
+
+
+# Seleccionamos los primeros 5 elementos de la tabla
+SELECT * from twitter_data LIMIT 5;
+
+
+# Seleccionamos la fecha del tweet y el texto, como el tweet se encuentra en formato JSON debemos utilizar una funcionación para obtener los valroes
+select get_json_object(twitter_data.twitter_val, "$.created_at"),
+get_json_object(twitter_data.twitter_val, "$.text") from twitter_data;
+
+
+
