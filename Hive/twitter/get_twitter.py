@@ -73,7 +73,7 @@ for result in query["statuses"]:
     #-----------------------------------------------------------------------
     # Escribimos al fichero csv
     #-----------------------------------------------------------------------
-    row = [user,text]
+    row = result
     #row = [ user, text, latitude, longitude ]    
     csvwriter.writerow(row)
     result_count += 1
