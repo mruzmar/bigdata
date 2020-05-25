@@ -34,4 +34,26 @@ select get_json_object(twitter_data.twitter_val, "$.created_at"),
 get_json_object(twitter_data.twitter_val, "$.text") from twitter_data;
 
 
+# contar palabras de twitter con Hive
 
+CREATE TABLE word_counts AS
+SELECT word, count(1) AS count FROM
+(SELECT explode(split(line, ' ')) AS word FROM twitter_data) w
+GROUP BY word
+ORDER BY word;
+
+
+# Como hay palabras que no aportan debemos eliminarlas
+# para ello creamos una tabla de stopwords
+
+
+DROP TABLE IF EXISTS StopWords;
+
+CREATE TABLE StopWords(StopWord STRING);
+LOAD DATA LOCAL INPATH '/StopWords.txt' OVERWRITE INTO TABLE StopWords;
+
+SELECT wc.* FROM word_counts wc
+left outer join Stopwords sw
+on lower(wc.word) = lower(sw.Stopword)
+WHERE sw.Stopword is Null
+LIMIT 10;
