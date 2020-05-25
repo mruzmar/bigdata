@@ -45,12 +45,13 @@ ORDER BY word;
 
 # Como hay palabras que no aportan debemos eliminarlas
 # para ello creamos una tabla de stopwords
+# A descargar fichero de https://raw.githubusercontent.com/stopwords-iso/stopwords-es/master/stopwords-es.txt
 
 
 DROP TABLE IF EXISTS StopWords;
 
 CREATE TABLE StopWords(StopWord STRING);
-LOAD DATA LOCAL INPATH '/StopWords.txt' OVERWRITE INTO TABLE StopWords;
+LOAD DATA LOCAL INPATH 'stopwords-es.txt' OVERWRITE INTO TABLE StopWords;
 
 SELECT wc.* FROM word_counts wc
 left outer join Stopwords sw
