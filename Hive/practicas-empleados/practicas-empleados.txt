@@ -7,36 +7,63 @@ Nos solicitan que hagamos un análisis de dichos datos y que podamos aportar valo
 En este caso vamos a utilizar HIVE como herramienta de análisis y para obtener resultados de las consultas sobre dichos datos.
 
 
-Creación de tablas
+#########################################
+# Primera fase obtención del dataset
+# El fichero de empleados se encuentra en esta dirección: https://github.com/mruzmar/bigdata/raw/master/Hive/practicas-empleados/employees.csv
+# Para descargarlo hay que ejecutar el siguiente comando en la consola
+wget https://github.com/mruzmar/bigdata/raw/master/Hive/practicas-empleados/employees.csv
+
+# se puede ver el contenido del fichero con:
+cat employees.csv
+
+# Si queremos parar la ejecución
+Ctrl + c
+
+# Para descargar ficheros de más de 100MB de drive hay que utilizar este tipo de comando
+wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=FILEID' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=FILEID" -O FILENAME && rm -rf /tmp/cookies.txt
+
+
+# En nuestro caso el fichero que tenemos se encuentra en esta dirección
+https://drive.google.com/u/0/uc?id=1TbTgfbHFjEqCl3nxTZ4nTMm22IVqw10E&export=download
+
+# Sustituimos
+
+wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1TbTgfbHFjEqCl3nxTZ4nTMm22IVqw10E' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1TbTgfbHFjEqCl3nxTZ4nTMm22IVqw10E" -O salaries.csv && rm -rf /tmp/cookies.txt 
+
+
+#########################################
+# Segunda fase creación de tablas en Hive
+# Creación de tablas
+# Escribimos:
+hive
+
+
+>hive
 
 
 create external table employee (
-	    employee_id INT,
-	    birthday DATE,
-	    first_name STRING,
-	    family_name STRING,
-	    gender CHAR(1),
-	    work_day DATE)
-row format serde 'org.apache.hadoop.hive.serde2.OpenCSVSerde'
-with serdeproperties (
-	    "separatorChar" = ",",
-	    "quoteChar"     = "'"
-)
+employee_id INT,
+birthday DATE,
+first_name STRING,
+family_name STRING,
+gender CHAR(1),
+work_day DATE)
 stored as textfile
 location '/employee/';
 
+
+
+LOAD DATA LOCAL INPATH "/home/input/employees.csv" OVERWRITE INTO TABLE employee;
+
 create external table salary (
-	    employee_id INT,
-	    salary INT,
-	    start_date DATE,
-	    end_date DATE)
-row format serde 'org.apache.hadoop.hive.serde2.OpenCSVSerde'
-with serdeproperties (
-	    "separatorChar" = ",",
-	    "quoteChar"     = "'"
-)
+employee_id INT,
+salary INT,
+start_date DATE,
+end_date DATE)
 stored as textfile
 location '/salary/';
+
+LOAD DATA LOCAL INPATH "/home/input/salaries.csv" OVERWRITE INTO TABLE salary;
 
 Querys
 Explica qué datos se obtienen con estas querys
