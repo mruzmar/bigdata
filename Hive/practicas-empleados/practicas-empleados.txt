@@ -37,8 +37,9 @@ wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download
 # Escribimos:
 hive
 
+hive>
 
->hive
+
 
 
 create external table employee (
@@ -48,25 +49,34 @@ first_name STRING,
 family_name STRING,
 gender CHAR(1),
 work_day DATE)
+row format serde 'org.apache.hadoop.hive.serde2.OpenCSVSerde'
+with serdeproperties ("separatorChar" = ",","quoteChar"     = "\'")
 stored as textfile
 location '/employee/';
 
 
-
-LOAD DATA LOCAL INPATH "/home/input/employees.csv" OVERWRITE INTO TABLE employee;
+LOAD DATA LOCAL INPATH "employees.csv" OVERWRITE INTO TABLE employee;
 
 create external table salary (
 employee_id INT,
 salary INT,
 start_date DATE,
 end_date DATE)
+row format serde 'org.apache.hadoop.hive.serde2.OpenCSVSerde'
+with serdeproperties (
+"separatorChar" = ",",
+"quoteChar"     = "\'"
+)
 stored as textfile
 location '/salary/';
 
-LOAD DATA LOCAL INPATH "/home/input/salaries.csv" OVERWRITE INTO TABLE salary;
+LOAD DATA LOCAL INPATH "salaries.csv" OVERWRITE INTO TABLE salary;
 
-Querys
-Explica qué datos se obtienen con estas querys
+
+#########################################
+# Tercera fase: Analítica
+# Querys
+# Explica qué datos se obtienen con estas querys
 
 
 select e.first_name, e.family_name, avg(s.salary) as avg_salary from
