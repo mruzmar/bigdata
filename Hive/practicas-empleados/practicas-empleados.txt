@@ -110,6 +110,10 @@ hive -e 'select * from employee order by work_day asc limit 10;'>emp_order_workd
 
 hive -e 'set hive.cli.print.header=true; select * from employee order by work_day asc limit 10;'>emp_order_workday.csv
 
+# Parece que Google Studio espera que los registros estén separados por comma (no probado)
+
+hive -e 'set hive.cli.print.header=true; select * from employee order by work_day asc limit 10;' | sed 's/[[:space:]]\+/,/g'>emp_order_workday.csv  
+
 
 
 # Una vez creado en data storage un segmento, por ejemplo "datos-datastudio"
