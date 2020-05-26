@@ -96,3 +96,20 @@ select * from employee order by work_day asc limit 10;
 select * from employee order by birthday asc limit 5;
 
 select first_name, family_name, work_day from employee where work_day >= '1990-01-01' and work_day <= '1990-01-31'
+
+
+#########################################
+# Tercera fase: Visualización
+# Exportación de datos a DataStorage e importación a Data Stucio
+
+# Exportar los resultados a un fichero
+
+hive -e 'select * from employee order by work_day asc limit 10;'>resultados.csv
+
+
+# Una vez creado en data storage un segmento, por ejemplo "datos-datastudio"
+# y almacenar el resultado 
+
+gsutil mv abc.csv gs://datos-datastudio/abc.csv
+
+# Una vez tenemos los resultados, incluir la fuente de datos en Data Studio (similar a Tableau)
