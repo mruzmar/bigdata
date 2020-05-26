@@ -104,7 +104,12 @@ select first_name, family_name, work_day from employee where work_day >= '1990-0
 
 # Exportar los resultados a un fichero
 
-hive -e 'select * from employee order by work_day asc limit 10;'>resultados.csv
+hive -e 'select * from employee order by work_day asc limit 10;'>emp_order_workday.csv
+
+# La misma instrucción pero añadiendo cabeceras
+
+hive -e 'set hive.cli.print.header=true; select * from employee order by work_day asc limit 10;'>emp_order_workday.csv
+
 
 
 # Una vez creado en data storage un segmento, por ejemplo "datos-datastudio"
