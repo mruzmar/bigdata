@@ -38,7 +38,7 @@ get_json_object(twitter_data.twitter_val, "$.text") from twitter_data;
 
 CREATE TABLE word_counts AS
 SELECT word, count(1) AS count FROM
-(SELECT explode(split(line, ' ')) AS word FROM twitter_data) w
+(SELECT explode(split(twitter_val, ' ')) AS word FROM twitter_data) w
 GROUP BY word
 ORDER BY word;
 
