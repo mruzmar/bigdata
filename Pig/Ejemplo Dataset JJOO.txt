@@ -1,60 +1,57 @@
-# Hive (http://hive.apache.org/)
-# Hive es un sistema de Data Warehouse para Hadoop que
-# facilita el uso de la agregación de los datos, ad-hoc
-# queries, y el análisis de grandes datasets almacenados en
-# Hadoop. Hive proporciona métodos de consulta de los
-# datos usando un lenguaje parecido al SQL, llamado HiveQL.
+## Partiendo del dataset de JJ.OO.s se pasa a analizar con PIg
+
+wget https://raw.githubusercontent.com/mruzmar/bigdata/master/Pig/atletas.csv
+
+hdfs dfs -mkdir /home
+hdfs dfs -put atletas.csv /home
+pig
+
+# cargamos en la variable atletas los contenidos del fichero
+atletas = LOAD '/home/atletas.csv' USING org.apache.pig.piggybank.storage.CSVExcelStorage(',','YES_MULTILINE','NOCHANGE','SKIP_INPUT_HEADER') as (atleta:chararray,pais:chararray,deporte:chararray,oro:int,plata:int,bronce:int,total:int);
+
+# Mostramos por pantalla resultados
+DUMP atletas_limit;
 
 
-# Ejemplo 1. Trabajar con el Json de elementos de twitter
-# Ejecutar https://raw.githubusercontent.com/mruzmar/bigdata/master/Hive/twitter/get_twitter.py para obtener el fichero data.json
+# establecemos un límite
+atletas_limit = LIMIT atletas 10;
 
-hdfs dfs -mkdir -p /home/twitter
-hdfs dfs -put data.json /home/twitter
+# Mostramos por pantalla resultados
+DUMP atletas_limit;
 
-# Creamos una tabla en la que se recopilará cada uno de los tweets que se han recuperado
-CREATE TABLE twitter_data(twitter_val STRING);
+# Hacemos agrupación
+atletas_group_pais = GROUP atletas BY pais;
 
-# Cargamos los twetts que se encuentran en el fichero json en la tabla creada anteriormente
-LOAD DATA INPATH "/home/twitter/data.json" OVERWRITE INTO TABLE twitter_data;
-
-# Mostramos las tablas que existen
-SHOW TABLES;
-
-# Mostramos la estructura de la tabla
-DESCRIBE twitter_data;
+# Ejecución paso a paso
+ILLUSTRATE atletas_group_pais;
 
 
-# Seleccionamos los primeros 5 elementos de la tabla
-SELECT * from twitter_data LIMIT 5;
+# Sumamos medallas
+suma_medallas = FOREACH atletas_group_pais GENERATE group AS pais,SUM(atletas.total) as cuenta_medallas;
+
+DUMP suma_medallas;
+
+# Ordenamos la suma de medallas
+
+ordena_medallas = ORDER suma_medallas BY cuenta_medallas DESC;
+
+DUMP ordena_medallas;
+
+# Filtrar los país con más medallas excluyendo swimming
+atletas_filtrado = FILTER atletas by deporte!='Swimming';
 
 
-# Seleccionamos la fecha del tweet y el texto, como el tweet se encuentra en formato JSON debemos utilizar una funcionación para obtener los valroes
-select get_json_object(twitter_data.twitter_val, "$.created_at"),
-get_json_object(twitter_data.twitter_val, "$.text") from twitter_data;
+suma_medallas = FOREACH (GROUP atletas_filtrado BY pais) GENERATE group as pais, SUM(atletas_filtrado.total) as cuenta_medallas;
 
+ordena_medallas = ORDER suma_medallas BY cuenta_medallas DESC;
 
-# contar palabras de twitter con Hive
+DUMP ordena_medallas;
 
-CREATE TABLE word_counts AS
-SELECT word, count(1) AS count FROM
-(SELECT explode(split(twitter_val, ' ')) AS word FROM twitter_data) w
-GROUP BY word
-ORDER BY word;
+ordena_medallas_limit = LIMIT ordena_medallas 1;
 
+DUMP ordena_medallas_limit;
 
-# Como hay palabras que no aportan debemos eliminarlas
-# para ello creamos una tabla de stopwords
-# A descargar fichero de https://raw.githubusercontent.com/stopwords-iso/stopwords-es/master/stopwords-es.txt
+# Seleccionamos los distintos paises
 
-
-DROP TABLE IF EXISTS StopWords;
-
-CREATE TABLE StopWords(StopWord STRING);
-LOAD DATA LOCAL INPATH 'stopwords-es.txt' OVERWRITE INTO TABLE StopWords;
-
-SELECT wc.* FROM word_counts wc
-left outer join Stopwords sw
-on lower(wc.word) = lower(sw.Stopword)
-WHERE sw.Stopword is Null
-LIMIT 10;
+distintos_paises = DISTINCT (FOREACH atletas GENERATE pais);
+DUMP distintos_paises;
