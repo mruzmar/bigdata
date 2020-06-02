@@ -1,0 +1,21 @@
+# Fuente de la información
+# https://docs.microsoft.com/es-es/azure/hdinsight/hdinsight-use-oozie-linux-mac
+
+## El proceso Hive consisten en crear una tabla e insertar datos de un Select
+DROP TABLE ${hiveTableName};
+CREATE EXTERNAL TABLE ${hiveTableName}(deviceplatform string, count string) ROW FORMAT DELIMITED
+FIELDS TERMINATED BY '\t' STORED AS TEXTFILE LOCATION '${hiveDataFolder}';
+INSERT OVERWRITE TABLE ${hiveTableName} SELECT deviceplatform, COUNT(*) as count FROM hivesampletable GROUP BY deviceplatform;
+
+## Se guardan estas sentencias en un fichero
+hiveprocess.hql
+
+
+# Creamos el directorio en HDFS
+hdfs dfs -mkdir -p /datalake/oozie/data
+
+# Ponemos el fichero en el directorio creado en HDFS
+hdfs dfs -put hiveprocess.hql /datalake/oozie/data/
+
+
+

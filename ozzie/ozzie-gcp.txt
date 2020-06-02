@@ -1,0 +1,35 @@
+https://cloud.google.com/dataproc/docs/concepts/workflows/using-workflows
+
+gcloud dataproc workflow-templates create 1000
+
+gcloud dataproc workflow-templates set-managed-cluster 1000 \
+        --master-machine-type n1-standard-4 \
+        --worker-machine-type n1-standard-4 \
+        --num-workers 2 \
+        --cluster-name [Nombre-cluster algo del tipo cluster-8782]
+
+# Tipos de jobs que se pueden crear:
+#https://cloud.google.com/sdk/gcloud/reference/dataproc/workflow-templates/add-job
+
+gcloud dataproc workflow-templates add-job hive \
+--step-id=hive1 \
+      --workflow-template 1000 --file /home/pforoabogado/hive.hql
+
+
+
+
+
+gcloud dataproc workflow-templates instantiate 1000
+
+Al ejecutar:
+
+gcloud dataproc workflow-templates instantiate 1000
+Waiting on operation [projects/peerless-rock-277020/regions/asia-east1/operations/ceed458d-4bb9-3398-8d1e-d9a7706233e9].
+WorkflowTemplate [1000] RUNNING
+WorkflowTemplate [1000] DONE
+Multiple validation errors:
+ - Insufficient 'CPUS' quota. Requested 12.0, available 8.0.
+ - Insufficient 'CPUS_ALL_REGIONS' quota. Requested 12.0, available 8.0.
+ - This request exceeds CPU quota. Some things to try: request fewer workers (a minimum of 2 is required), use smaller master and/or worker machine types (such as n1-standard-2).
+ERROR: (gcloud.dataproc.workflow-templates.instantiate) Operation [projects/peerless-rock-277020/regions/asia-east1/operations/ceed458d-4bb9-3398-8d1e-d9a7706233e9] failed: Error submitting create cluster request.
+
