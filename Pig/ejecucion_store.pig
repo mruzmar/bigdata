@@ -5,3 +5,4 @@ atletas = LOAD '/home/atletas.csv' USING org.apache.pig.piggybank.storage.CSVExc
 atletas_limit = LIMIT atletas 10;
 
 STORE atletas_limit INTO '/home/resultado';
+
