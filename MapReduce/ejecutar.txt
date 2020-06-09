@@ -2,7 +2,7 @@
 ## Permite realizar pruebas mientras estamos desarrollando la solución.
 
 # descagar el programa mapper
-https://raw.githubusercontent.com/mruzmar/bigdata/master/MapReduce/mapper.py
+wget https://raw.githubusercontent.com/mruzmar/bigdata/master/MapReduce/mapper.py
 
 # descargar el programa reducer
 wget https://raw.githubusercontent.com/mruzmar/bigdata/master/MapReduce/reducer.py
