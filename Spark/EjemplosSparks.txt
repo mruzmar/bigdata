@@ -1,0 +1,120 @@
+## Lanzar proceso Spark
+## Lanzar proceso python en Spark que cuenta el número de palabras de un
+##documento de texto:
+
+# Comprobar si el programa wordcount se encuentra disponible:
+ls /usr/lib/spark/examples/src/main/python/wordcount.py
+
+# visualizar el código del programa python
+cat /usr/lib/spark/examples/src/main/python/wordcount.py
+
+
+# Comprobar si el programa wordcount se encuentra disponible:
+ls /usr/lib/spark/examples/src/main/python/wordcount.py
+
+# visualizar el código del programa python
+cat /usr/lib/spark/examples/src/main/python/wordcount.py
+
+# descargamos un libro
+wget http://www.gutenberg.org/cache/epub/13507/pg13507.txt
+
+# creamos directorio
+hdfs dfs -mkdir -p /input/spark/
+
+# ingestamos fichero en HDFS
+hdfs dfs -put pg13507.txt /input/spark/
+
+# comprobamos si se encuentra en el directorio
+hdfs dfs -ls /input/spark/
+
+
+## Lanzamos proceso wordcount.py
+spark-submit /usr/lib/spark/examples/src/main/python/wordcount.py /input/spark/pg13507.txt
+
+
+## Es posible que de errores por la codificación del documento, por ello hay que editar el programa de python mediante el editor vi
+
+sudo vi /usr/lib/spark/examples/src/main/python/wordcount.py
+# Incluir este texto al inicio:
+reload(sys)
+sys.setdefaultencoding('utf8')
+
+# Para ello una vez en el editor “vi”, pulsar i (insert), posicionarse al principio del texto, copiar lo indicar, pulsar ESC, y escribir :wq (escribir y salir)
+# De nuevo se puede lanzar:
+spark-submit /usr/lib/spark/examples/src/main/python/wordcount.py /input/spark/pg13507.txt
+
+
+### Spark sql
+# Tendremos el fichero: clientes.txt
+# 100, John Smith, Austin, TX, 78727
+# 200, Joe Johnson, Dallas, TX, 75201
+# 300, Bob Jones, Houston, TX, 77028
+# 400, Andy Davis, San Antonio, TX, 78227
+# 500, James Williams, Austin, TX, 78727
+
+wget https://raw.githubusercontent.com/mruzmar/bigdata/master/Spark/clientes.txt
+
+# Incluimos en fichero en HDFS
+hadoop fs -put clientes.txt /input
+
+# Entramos en el shell de spark para lanzar órdenes:
+spark-shell
+
+// Creamos SQLContext para realizar conexiones SQL
+val sqlContext = new org.apache.spark.sql.SQLContext(sc)
+// Importar statement
+import sqlContext.implicits._
+// Crear la clase Clientes
+case class Clientes(customer_id: Int, name: String, city: String, state: String,
+zip_code: String)
+// Crear DataFrame de clientes.
+val dfCustomers1 = sc.textFile("/input/clientes.txt").map(_.split(",")).map(p =>
+Clientes(p(0).trim.toInt, p(1), p(2), p(3), p(4))).toDF()
+// Registramos el DataFrame como tabla
+dfCustomers1.createOrReplaceTempView("Clientes")
+// Mostrar el contenido del DataFrame
+dfCustomers1.show()
+// Mostrar el esquema DF
+dfCustomers1.printSchema()
+// Seleccionamos el nombre de clientes
+dfCustomers1.select("name").show()
+// Seleccionamos nombre y ciudad de clientes
+dfCustomers1.select("name", "city").show()
+// Seleccionamos cliente por id
+dfCustomers1.filter(dfCustomers1("customer_id").equalTo(500)).show()
+// Contar clientes agrupados por código postal
+dfCustomers1.groupBy("zip_code").count().show()
+
+## Trabajando con JSON
+wget https://raw.githubusercontent.com/mruzmar/bigdata/master/Spark/empleados.json
+
+hadoop fs -put empleados.json /input
+
+/****************************************************
+empleados.json
+
+ {"id" : "1201", "name" : "Andrés", "age" : "25"}
+ {"id" : "1202", "name" : "Mabel", "age" : "28"}
+ {"id" : "1203", "name" : "Juan Carlos", "age" : "39"}
+ {"id" : "1204", "name" : "María del Carmen", "age" : "23"}
+ {"id" : "1205", "name" : "Gemma", "age" : "23"}
+
+******************************************************/
+
+# Entramos en el shell de spark para lanzar órdenes:
+spark-shell
+
+val sqlContext = new org.apache.spark.sql.SQLContext(sc)
+val empleados = sqlContext.jsonFile("/input/empleados.json")
+
+
+empleados.printSchema
+empleados.show()
+empleados.select("name").show()
+empleados.filter(empleados("id") > 1203).show()
+empleados.filter(empleados("age") >23).show()
+
+
+
+
+
