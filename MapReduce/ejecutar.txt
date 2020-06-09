@@ -1,6 +1,13 @@
 ## Ejecución modo desarrollo
 ## Permite realizar pruebas mientras estamos desarrollando la solución.
 
+# descagar el programa mapper
+https://raw.githubusercontent.com/mruzmar/bigdata/master/MapReduce/mapper.py
+
+# descargar el programa reducer
+wget https://raw.githubusercontent.com/mruzmar/bigdata/master/MapReduce/reducer.py
+
+
 echo "Madrid Barcelona Bilbao Madrid Barcelona Cádiz Almería Madrid Coruña" | python mapper.py
 
 echo "Madrid Barcelona Bilbao Madrid Barcelona Cádiz Almería Madrid Coruña" | python mapper.py | sort -k1,1 | python reducer.py
