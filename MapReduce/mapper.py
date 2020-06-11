@@ -14,6 +14,6 @@ for line in sys.stdin:
     # Para cada palabra encontrada
     for word in words:
     	# antes limpiamos
-    	re.sub('[^a-zA-Z0-9\s()]', '', word).strip()
+    	word = re.sub('[!@#$,;.-?¿¡]', '', word)
         # escribir los resultados en STDOUT (salida estándar);
         print '%s\t%s' % (word, 1)
