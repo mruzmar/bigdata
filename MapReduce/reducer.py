@@ -40,4 +40,4 @@ for line in sys.stdin:
 
 # No olvidar mostrar la última palabra si es necesario
 if current_word == word:
-    print '%s\t%s' % (current_word  current_count)
+    print '%s\t%s' % (current_word, current_count)
