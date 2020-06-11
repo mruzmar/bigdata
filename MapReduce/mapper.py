@@ -3,6 +3,7 @@
 """Programa mapper.py"""
 
 import sys
+import re
 
 # la entrada de datos llega desde STDIN (standard input)
 for line in sys.stdin:
@@ -12,5 +13,7 @@ for line in sys.stdin:
     words = line.split()
     # Para cada palabra encontrada
     for word in words:
+    	# antes limpiamos
+    	re.sub('[^a-zA-Z0-9\s()]', '', word).strip()
         # escribir los resultados en STDOUT (salida estándar);
         print '%s\t%s' % (word, 1)
