@@ -8,14 +8,14 @@ wget https://datos.comunidad.madrid/catalogo/dataset/cb5b856f-71a4-4e34-8539-84a
 # Movemos el fichero
 # DS para Deerslayer
 # HF para  Huckleberry Finn
-mv pg3285.txt DS.txt
-mv pg76.txt HF.txt
+mv calidad_aire_datos_dia.csv DS.txt
+
                  
 # Creamos nuestro directorio HdFS
 hadoop fs -mkdir -p  /user/DataLake
                  
 # Añadimos el fichero al Data Lake
-hadoop fs -put HF.txt /user/DataLake/
+hadoop fs -put DS.txt /user/DataLake/
 # Comprobamos si el fichero se encuentra en el directorio
 hadoop fs -ls /user/DataLake/                 
                  
@@ -28,17 +28,3 @@ hadoop fs -put DS.txt.gz /user/DataLake/
                  
 
 
-Contando palabras en Twain y Cooper
-
-                 
-# Comprobar la ruta en la que se enuentra hadoop-examples.jar find . -name hadoop-examples.jar
-hadoop jar /usr/lib/hadoop-0.20-mapreduce/hadoop-examples.jar wordcount HF.txt HF.out
- 
-# 
-hadoop jar /usr/lib/hadoop/hadoop-examples.jar wordcount HF.txt HF.out
-                 
-# 
-hadoop jar /usr/lib/hadoop-0.20-mapreduce/hadoop-examples.jar wordcount DS.txt.gz DS.out
-
-# Visualizar resultados
-hadoop fs -cat /user/cloudera/HF.out/part-r-00000 | less
