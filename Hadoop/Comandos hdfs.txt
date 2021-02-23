@@ -2,8 +2,8 @@
 sudo yum install wget
                  
 # con wget descargamos contenido de la bibliotea Gutenberg - Twain and Cooper
-wget -U firefox http://www.gutenberg.org/cache/epub/76/pg76.txt
-wget -U firefox http://www.gutenberg.org/cache/epub/3285/pg3285.txt
+wget https://datos.comunidad.madrid/catalogo/dataset/cb5b856f-71a4-4e34-8539-84a7e994c972/resource/9fd86617-370a-4770-8a92-0c42ea02d6a1/download/calidad_aire_datos_dia.csv
+
                  
 # Movemos el fichero
 # DS para Deerslayer
