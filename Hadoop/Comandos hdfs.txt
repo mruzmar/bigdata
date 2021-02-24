@@ -1,4 +1,6 @@
-# instalar la utilidad wget para poder descargar de Internet contenido
+# Si al ejecutar wget en el servidor, da un error de que no existe, es necesario instalar la utilidad
+# Instrucción para instalar wget en CentOS
+
 sudo yum install wget
                  
 # con wget descargamos contenido de la bibliotea Gutenberg - Twain and Cooper
