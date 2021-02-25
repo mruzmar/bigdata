@@ -1,3 +1,6 @@
+#Si no se encuentra instalado tweepy
+# pip install tweepy
+# o si se necesitan permisos: sudo pip install tweepy
 import tweepy
 
 #Variables that contains the user credentials to access Twitter API 
