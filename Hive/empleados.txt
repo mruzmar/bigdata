@@ -1,0 +1,3 @@
+1000	Miguel García	45000	CEO
+1001	Francisco González	45000	CTO
+1002	Andrés Guzmán	40000	Technical
