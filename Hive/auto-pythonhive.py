@@ -17,14 +17,16 @@ output = subprocess.getstatusoutput(cmd)
 
 
 
-cmd="""hive -S -e "CREATE EXTERNAL TABLE log4jLogs (t1 string, t2 string, t3 string, t4 string, t5 string, t6 string, t7 string) ROW FORMAT DELIMITED FIELDS TERMINATED BY " " STORED AS TEXTFILE LOCATION "/home/info/";" """
+cmd="""hive -S -e "CREATE EXTERNAL TABLE log4jLogs (t1 string, t2 string, t3 string, t4 string, t5 string, t6 string, t7 string) ROW FORMAT DELIMITED FIELDS TERMINATED BY " " STORED AS TEXTFILE LOCATION "/home/info/"; """
 print ("Ejecutando "+cmd)
 
 output = subprocess.getstatusoutput(cmd)
+print("resultado creación: "+output)
 
 cmd="""hive -S -e "LOAD DATA INPATH '/datalake/logs/mobile/application1/sample.log' OVERWRITE INTO TABLE log4jLogs;" """
 print ("Ejecutando "+cmd)
 output = subprocess.getstatusoutput(cmd)
+print("resultado load: "+output)
 
 cmd = "hive -S -e 'SELECT * FROM log4jLogs WHERE t4 = \"[ERROR]\";'"
 print ("Ejecutando "+cmd)
