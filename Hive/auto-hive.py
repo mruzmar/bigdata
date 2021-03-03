@@ -28,7 +28,7 @@ print ("Ejecutando "+cmd)
 output = subprocess.getstatusoutput(cmd)
 
 
-cmd = """hive -S -e "SELECT * FROM log4jLogs WHERE t4 = '[ERROR]';" """
+cmd = """ hive -S -e "SELECT * FROM log4jLogs WHERE t4 = '[ERROR]';" """
 print ("Ejecutando "+cmd)
 output = subprocess.getstatusoutput(cmd)
 
