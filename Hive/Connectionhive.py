@@ -6,12 +6,18 @@ import shlex, subprocess
 
 # python3 -m pip install sqlalchemy
 
-import sqlalchemy
-engine = create_engine("apachehive:///?Server=localhost&;Port=10000&TransportMode=BINARY")
-factory = sessionmaker(bind=engine)
-session = factory()
-for instance in session.query(log4jLogs):
-	print("---------")
+from sqlalchemy import create_engine
+
+#Input Information
+host = 'localhost'
+port = 10000
+schema = 'hive_schema'
+table = 'new_table'
+
+#Execution
+engine = create_engine(f'hive://{host}:{port}/{schema}')
+engine.execute('CREATE TABLE ' + table + ' (col1 col1-type, col2 col2-type)')
+Data.to_sql(name=table, con=engine, if_exists='append')
 
 
 exit()
