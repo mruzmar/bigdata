@@ -25,8 +25,8 @@ print ("Ejecutando "+cmd)
 output = subprocess.call(cmd, shell=True)
 
 
-# Ingestamos fichero descargado en el directorio
-cmd="hdfs dfs -put sample.log /datalake/logs/mobile/application1/"
+# Ingestamos fichero descargado en el directorio, opción -f para hacer overwrite
+cmd="hdfs dfs -put -f sample.log /datalake/logs/mobile/application1/"
 print ("Ejecutando "+cmd)
 output = subprocess.call(cmd, shell=True)
 
