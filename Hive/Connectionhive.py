@@ -47,22 +47,22 @@ try:
 	engine.execute('CREATE TABLE ' + table + ' (t1 string, t2 string, t3 string, t4 string, t5 string, t6 string, t7 string) ROW FORMAT DELIMITED FIELDS TERMINATED BY " " STORED AS TEXTFILE LOCATION "/home/info/"  '  )
 	Data.to_sql(name=table, con=engine, if_exists='append')
 except:
-  print("Exception occurred CREATE TABLE")
+	print("Exception occurred CREATE TABLE")
 
 
 # Cargamos el fichero en la tabla previamente cargada
 try:
-engine.execute(' LOAD DATA INPATH "/datalake/logs/mobile/application1/sample.log" OVERWRITE INTO TABLE' + table  )
-Data.to_sql(name=table, con=engine, if_exists='append')
+	engine.execute(' LOAD DATA INPATH "/datalake/logs/mobile/application1/sample.log" OVERWRITE INTO TABLE' + table  )
+	Data.to_sql(name=table, con=engine, if_exists='append')
 except:
-  print("Exception occurred LOAD DATA")
+	print("Exception occurred LOAD DATA")
 
 # Seleccionamos los registros que han producido un error en al aplicación Móvil
 engine.execute(' SELECT * FROM ' + table  + ' WHERE t4 = "[ERROR]" ' )
 connection = engine.connect()
 results = connection.execute(stmt).fetchall()
 for result in results:
-    print(result)
+	print(result)
 
 
 
