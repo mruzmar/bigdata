@@ -11,12 +11,12 @@ from sqlalchemy import create_engine
 #Input Information
 host = 'localhost'
 port = 10000
-schema = 'hive_schema'
+schema = 'default'
 table = 'new_table'
 
 #Execution
 engine = create_engine(f'hive://{host}:{port}/{schema}')
-engine.execute('CREATE TABLE ' + table + ' (col1 col1-type, col2 col2-type)')
+engine.execute('CREATE TABLE ' + table + ' (t1 string, t2 string)')
 Data.to_sql(name=table, con=engine, if_exists='append')
 
 
