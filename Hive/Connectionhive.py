@@ -4,6 +4,7 @@
 # que se encuentran en dicho log ejecución de aplicación
 import shlex, subprocess
 
+# python3 -m pip install pyhive
 from pyhive import hive
 
 host_name = "localhost"
@@ -13,10 +14,9 @@ password = "" # pass
 database="default"
 
 def hiveconnection(host_name, port, user,password, database):
-    conn = hive.Connection(host=host_name, port=port, username=user,password=password,
-                           database=database, auth='CUSTOM')
+    conn = hive.Connection(host=host_name, port=port, username=user,password=password,database=database, auth='CUSTOM')
     cur = conn.cursor()
-    cur.execute('select name  from log4jLogs limit 2')
+    cur.execute('select * from log4jLogs limit 2')
     result = cur.fetchall()
 
     return result
