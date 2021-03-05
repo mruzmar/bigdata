@@ -4,31 +4,14 @@
 # que se encuentran en dicho log ejecución de aplicación
 import shlex, subprocess
 
-# python3 -m pip install pyhive
-# python3 -m pip install sasl
-# python3 -m pip install thrift
-# python3 -m pip install thrift-sasl
-# python3 -m pip install PyHive
-from pyhive import hive
+# python3 -m pip install sqlalchemy
 
-host_name = "localhost"
-port = 10000  #default is 10000
-user = "" # user name  
-password = "" # pass 
-database="default"
-
-def hiveconnection(host_name, port, user,password, database):
-    conn = hive.Connection(host=host_name, port=port, username=user,password=password,database=database, auth='CUSTOM')
-    cur = conn.cursor()
-    cur.execute('select * from log4jLogs limit 2')
-    result = cur.fetchall()
-
-    return result
-
-# Call above function
-output = hiveconnection(host_name, port, user,password, database)
-print(output) 
-
+import sqlalchemy
+engine = create_engine("apachehive:///?Server=localhost&;Port=10000&TransportMode=BINARY")
+factory = sessionmaker(bind=engine)
+session = factory()
+for instance in session.query(log4jLogs):
+	print("---------")
 
 
 exit()
