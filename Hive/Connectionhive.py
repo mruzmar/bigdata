@@ -25,6 +25,12 @@ def hiveconnection(host_name, port, user,password, database):
 output = hiveconnection(host_name, port, user,password, database)
 print(output) 
 
+from pyhive import presto  # or import hive
+cursor = presto.connect('localhost').cursor()
+cursor.execute('select * from log4jLogs limit 20')
+print cursor.fetchone()
+print cursor.fetchall()
+
 exit()
 
 # Sel fichero existiera al descargar lo renombra, así que borramos antes el fichero
