@@ -39,12 +39,10 @@ output = subprocess.call(cmd, shell=True)
 
 #Input Information
 #/usr/local/apache-hive-3.1.2-bin/conf/hive-site.xml
-#   <name>hive.metastore.port</name>
- #   <value>9083</value>
+
 
 host = 'localhost'
-#port = 10000
-port = 9083
+port = 10000
 schema = 'default'
 table = 'log4jLogs2'
 engine = create_engine(f'hive://{host}:{port}/{schema}')
