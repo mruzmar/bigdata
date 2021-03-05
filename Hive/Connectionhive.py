@@ -65,6 +65,8 @@ engine.execute(' LOAD DATA INPATH "/datalake/logs/mobile/application1/sample.log
 query = ' SELECT * FROM ' + table  + ' WHERE t4 = "[ERROR]" '
 connection = engine.connect()
 results = connection.execute(query).fetchall()
+
+print ("Resultado tras análisis ...........")
 for result in results:
 	print(result)
 
