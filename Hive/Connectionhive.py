@@ -13,7 +13,7 @@ from sqlalchemy import create_engine
 
 
 
-# Sel fichero existiera al descargar lo renombra, así que borramos antes el fichero
+# Si el fichero existiera al descargar lo renombra, así que borramos antes el fichero
 cmd="rm sample.log"
 print ("Ejecutando "+cmd)
 # Ejecución del comando a través del shell
@@ -71,6 +71,10 @@ for result in results:
 	print(result)
 
 
-
+# Damos por tratado el fichero, lo borramos de staging
+cmd="rm sample.log"
+print ("Ejecutando "+cmd)
+# Ejecución del comando a través del shell
+subprocess.call(cmd, shell=True)
 
 
