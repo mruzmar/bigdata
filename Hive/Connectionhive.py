@@ -5,6 +5,10 @@
 import shlex, subprocess
 
 # python3 -m pip install pyhive
+# python3 -m pip install sasl
+# python3 -m pip install thrift
+# python3 -m pip install thrift-sasl
+# python3 -m pip install PyHive
 from pyhive import hive
 
 host_name = "localhost"
@@ -21,15 +25,7 @@ def hiveconnection(host_name, port, user,password, database):
 
     return result
 
-# Call above function
-output = hiveconnection(host_name, port, user,password, database)
-print(output) 
 
-from pyhive import presto  # or import hive
-cursor = presto.connect('localhost').cursor()
-cursor.execute('select * from log4jLogs limit 20')
-print cursor.fetchone()
-print cursor.fetchall()
 
 exit()
 
