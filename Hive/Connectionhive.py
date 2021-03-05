@@ -54,11 +54,12 @@ Data.to_sql(name=table, con=engine, if_exists='append')
 
 # Seleccionamos los registros que han producido un error en al aplicación Móvil
 engine.execute(' SELECT * FROM ' + table  + ' WHERE t4 = "[ERROR]" ' )
-Data.to_sql(name=table, con=engine, if_exists='append')
-print ("Ejecutando "+cmd)
+connection = engine.connect()
+results = connection.execute(stmt).fetchall()
+for result in results:
+    print(result)
 
 
 
-print (output)
 
 
