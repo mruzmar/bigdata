@@ -25,6 +25,10 @@ def hiveconnection(host_name, port, user,password, database):
 
     return result
 
+# Call above function
+output = hiveconnection(host_name, port, user,password, database)
+print(output) 
+
 
 
 exit()
