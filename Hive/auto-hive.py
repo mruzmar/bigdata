@@ -1,16 +1,13 @@
 import shlex, subprocess
 
-def run_hive_query(query):
-    logging.debug("Running query: %s" % (query))
+def run_hivequery(query):
     try:
-        proc = subprocess.Popen(["hive -e \"%s\"" % (query)], stdout=subprocess.PIPE, shell=True)
+        output = subprocess.Popen(["hive -e \"%s\"" % (query)], stdout=subprocess.PIPE, shell=True)
         (out, err) = proc.communicate()
     except:
-        raise Exception('Failure in running query: %s!' % (query))
+        raise Exception('Fallo ejecutando query: %s!' % (query))
 
-    logging.debug(out)
-    logging.debug("\nreturncode: " + str(proc.returncode))
-    return proc.returncode, str(out.decode('ascii'))
+    return output.returncode, str(out.decode('ascii'))
 
 
 # pasamos fichero a stating
@@ -34,7 +31,7 @@ cmd="""hive -S -e "CREATE EXTERNAL TABLE log4jLogs (t1 string, t2 string, t3 str
 cmd=""" CREATE EXTERNAL TABLE log4jLogs (t1 string, t2 string, t3 string, t4 string, t5 string, t6 string, t7 string) ROW FORMAT DELIMITED FIELDS TERMINATED BY ' ' STORED AS TEXTFILE LOCATION '/home/info/'; """
 print ("Ejecutando "+cmd)
 
-run_hive_query(cmd)
+run_hivequery(cmd)
 
 
 cmd="""hive -S -e "LOAD DATA INPATH '/datalake/logs/mobile/application1/sample.log' OVERWRITE INTO TABLE log4jLogs;" """
