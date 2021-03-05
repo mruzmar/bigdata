@@ -1,4 +1,4 @@
-import subprocess
+import shlex, subprocess
 
 
 # pasamos fichero a stating
