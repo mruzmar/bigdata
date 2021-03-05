@@ -57,7 +57,7 @@ engine.execute(' LOAD DATA INPATH "/datalake/logs/mobile/application1/sample.log
 
 # Seleccionamos los registros que han producido un error en al aplicación Móvil
 query = ' SELECT * FROM ' + table  + ' WHERE t4 = "[ERROR]" '
-#connection = engine.connect()
+connection = engine.connect()
 results = connection.execute(query).fetchall()
 for result in results:
 	print(result)
