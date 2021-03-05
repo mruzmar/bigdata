@@ -14,13 +14,7 @@ port = 10000
 schema = 'default'
 table = 'log4jLogs2'
 
-#Execution
-engine = create_engine(f'hive://{host}:{port}/{schema}')
-engine.execute('CREATE TABLE ' + table + ' (t1 string, t2 string, t3 string, t4 string, t5 string, t6 string, t7 string) ROW FORMAT DELIMITED FIELDS TERMINATED BY " " STORED AS TEXTFILE LOCATION "/home/info/"  ')
-Data.to_sql(name=table, con=engine, if_exists='append')
 
-
-exit()
 
 # Sel fichero existiera al descargar lo renombra, así que borramos antes el fichero
 cmd="rm sample.log"
@@ -47,22 +41,22 @@ output = subprocess.call(cmd, shell=True)
 
 
 # Creamos tabla en Hive
-cmd="""hive -S -e "CREATE EXTERNAL TABLE log4jLogs (t1 string, t2 string, t3 string, t4 string, t5 string, t6 string, t7 string) ROW FORMAT DELIMITED FIELDS TERMINATED BY ' ' STORED AS TEXTFILE LOCATION '/home/info/';" """
-print ("Ejecutando "+cmd)
-
-output = subprocess.call(cmd, shell=True)
+#Execution
+engine = create_engine(f'hive://{host}:{port}/{schema}')
+engine.execute('CREATE TABLE ' + table + ' (t1 string, t2 string, t3 string, t4 string, t5 string, t6 string, t7 string) ROW FORMAT DELIMITED FIELDS TERMINATED BY " " STORED AS TEXTFILE LOCATION "/home/info/"  '  )
+Data.to_sql(name=table, con=engine, if_exists='append')
 
 
 # Cargamos el fichero en la tabla previamente cargada
-cmd="""hive -S -e "LOAD DATA INPATH '/datalake/logs/mobile/application1/sample.log' OVERWRITE INTO TABLE log4jLogs;" """
-print ("Ejecutando "+cmd)
-subprocess.call(shlex.split(cmd))
+engine.execute(' LOAD DATA INPATH '/datalake/logs/mobile/application1/sample.log' OVERWRITE INTO TABLE' + table  )
+Data.to_sql(name=table, con=engine, if_exists='append')
 
 
 # Seleccionamos los registros que han producido un error en al aplicación Móvil
-cmd = """ hive -S -e "SELECT * FROM log4jLogs WHERE t4 = '[ERROR]';" """
+engine.execute(' SELECT * FROM ' + table  + ' WHERE t4 = "[ERROR]" ' )
+Data.to_sql(name=table, con=engine, if_exists='append')
 print ("Ejecutando "+cmd)
-subprocess.call(shlex.split(cmd))
+
 
 
 print (output)
