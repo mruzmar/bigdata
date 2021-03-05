@@ -16,7 +16,7 @@ table = 'log4jLogs2'
 
 #Execution
 engine = create_engine(f'hive://{host}:{port}/{schema}')
-engine.execute('CREATE TABLE ' + table + ' (t1 string, t2 string, t3 string, t4 string, t5 string, t6 string, t7 string) ROW FORMAT DELIMITED FIELDS TERMINATED BY " " STORED AS TEXTFILE LOCATION "/home/info/"  '
+engine.execute('CREATE TABLE ' + table + ' (t1 string, t2 string, t3 string, t4 string, t5 string, t6 string, t7 string) ROW FORMAT DELIMITED FIELDS TERMINATED BY " " STORED AS TEXTFILE LOCATION "/home/info/"  ')
 Data.to_sql(name=table, con=engine, if_exists='append')
 
 
