@@ -48,7 +48,7 @@ Data.to_sql(name=table, con=engine, if_exists='append')
 
 
 # Cargamos el fichero en la tabla previamente cargada
-engine.execute(' LOAD DATA INPATH '/datalake/logs/mobile/application1/sample.log' OVERWRITE INTO TABLE' + table  )
+engine.execute(' LOAD DATA INPATH "/datalake/logs/mobile/application1/sample.log" OVERWRITE INTO TABLE' + table  )
 Data.to_sql(name=table, con=engine, if_exists='append')
 
 
