@@ -8,12 +8,6 @@ import shlex, subprocess
 
 from sqlalchemy import create_engine
 
-#Input Information
-host = 'localhost'
-port = 10000
-schema = 'default'
-table = 'log4jLogs2'
-
 
 
 # Sel fichero existiera al descargar lo renombra, así que borramos antes el fichero
@@ -40,10 +34,16 @@ print ("Ejecutando "+cmd)
 output = subprocess.call(cmd, shell=True)
 
 
+#Input Information
+host = 'localhost'
+port = 10000
+schema = 'default'
+table = 'log4jLogs2'
+engine = create_engine(f'hive://{host}:{port}/{schema}')
+
 # Creamos tabla en Hive
 #Execution
 try:
-	engine = create_engine(f'hive://{host}:{port}/{schema}')
 	engine.execute('CREATE TABLE ' + table + ' (t1 string, t2 string, t3 string, t4 string, t5 string, t6 string, t7 string) ROW FORMAT DELIMITED FIELDS TERMINATED BY " " STORED AS TEXTFILE LOCATION "/home/info/"  '  )
 	Data.to_sql(name=table, con=engine, if_exists='append')
 except:
@@ -51,11 +51,9 @@ except:
 
 
 # Cargamos el fichero en la tabla previamente cargada
-try:
-	engine.execute(' LOAD DATA INPATH "/datalake/logs/mobile/application1/sample.log" OVERWRITE INTO TABLE' + table  )
-	Data.to_sql(name=table, con=engine, if_exists='append')
-except:
-	print("Exception occurred LOAD DATA")
+engine.execute(' LOAD DATA INPATH "/datalake/logs/mobile/application1/sample.log" OVERWRITE INTO TABLE' + table  )
+Data.to_sql(name=table, con=engine, if_exists='append')
+print("Exception occurred LOAD DATA")
 
 # Seleccionamos los registros que han producido un error en al aplicación Móvil
 engine.execute(' SELECT * FROM ' + table  + ' WHERE t4 = "[ERROR]" ' )
