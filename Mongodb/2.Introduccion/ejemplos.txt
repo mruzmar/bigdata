@@ -1,0 +1,2 @@
+1. Importar datos en una coleccion
+mongoimport --host localhost --db curso --collection lecturer --type json --file "/ejemplos/2.Introduccion/datos_lecturer.json"

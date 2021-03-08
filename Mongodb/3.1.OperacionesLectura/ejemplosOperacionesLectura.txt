@@ -1,0 +1,138 @@
+3.1 Insertar valores para poder consultar
+=======================================================================
+db.coleccion.insert ( { a:1 } )
+db.coleccion.insert ( [{ a:2 }, { a:3 } ])
+db.coleccion.find()
+
+{ "_id" : ObjectId("57effbae18fa96dbe07e6fdc"), "a" : 1 }
+{ "_id" : ObjectId("57effbc618fa96dbe07e6fdd"), "a" : 2 }
+{ "_id" : ObjectId("57effbc618fa96dbe07e6fde"), "a" : 3 } --> Solo se diferencian en un caracter ya que se han insertado al mismo tiempo
+
+----------------------------------------------------------
+<!-- ID -->
+db.coleccion.insert ( { _id : 1, a:4 } ) <!-- Inserto con id propio -->
+db.coleccion.insert ( { _id : 1, a:5 } ) <!-- No puedo repetir id, es único -->
+
+----------------------------------------------------------
+>var doc = db.coleccion.findOne()
+>doc.b = 1
+>db.coleccion.save (doc) <!-- Le paso un documento que ya tiene id, reemplazará el documento  -->
+>db.coleccion.find()
+
+>var doc = db.coleccion.findOne()
+>delete doc._id <!-- Elimino el campo id -->
+>db.coleccion.save (doc) <!-- estará el antiguo mas el nuevo con un nuevo id -->
+
+
+===============			Ejercicio 		========================
+Insertar en coleccion 4 estudiantes documentos con campo estudiante con su nombre y edad
+
+
+3.2 Leer documentos
+=========================================================
+db.estudiantes.find ({estudiante : "Carlos"})
+db.estudiantes.find ({edad : 12},{estudiante:1})<!-- solo quiero el nombre -->
+db.estudiantes.find ({edad : 12},{_id:0,estudiante:1})<!--Explicitamente oculto el campo _id -->
+
+
+
+3.3 Filtrar Documentos Operadores comparacion
+=============================================================
+1. Cargar Fichero \3.1.FiltrarDocumentos\cargaPuntuaciones1.js
+load ("/ejemplos/3.1.OperacionesLectura/3.1.FiltrarDocumentos/cargaPuntuaciones1.js")
+>db.puntuaciones.count()
+>db.puntuaciones.findOne()
+
+<!-- Puntuaciones mayores de 99 -->
+>db.puntuaciones.find({puntuacion: {$gt : 99} })
+>db.puntuaciones.find({puntuacion: {$gt : 99} }).pretty()
+>db.puntuaciones.find({puntuacion: {$lte : 3} })
+
+<!-- Multiples condiciones -->
+>db.puntuaciones.find({tipo: {$ne : "examen"} , puntuacion : {$lt:30} })
+
+<!--mostrar mas de 80 y menos de 90-->
+db.puntuaciones.find({tipo: {$ne : "examen"} , puntuacion : {$gt:80} , puntuacion : {$lt:90} })<!-- no funciona -->
+>db.puntuaciones.find({tipo: {$ne : "examen"} , puntuacion : {$gt:80 , $lt:90} })
+
+<!--mostrar examenes con puntuacion mas de 80 y preguntas menos de 10-->
+>db.puntuaciones.find( {$or: [
+		{tipo: "examen" , puntuacion : {$gt:80} },
+		{tipo: "pregunta" , puntuacion : {$lt:10} }
+	]
+	}
+)
+
+
+<!-- Comprobar exitencia de un campo -->
+db.puntuaciones.find( {prueba : { $exists:true} ) <!-- no devolvera nada -->
+db.puntuaciones.find( {prueba : { $exists:false} ) <!-- devolvera todos -->
+
+<!-- Comprobar tipo de un campo -->
+db.puntuaciones.find( {tipo : { $type:2} }).count() <!-- devolvera todos -->
+db.puntuaciones.find( {tipo : { $type:4} }).count() <!-- devolvera todos -->
+
+===============			Ejercicios 		================================
+
+1.Recuperar los exámenes con más de 70 puntos
+
+2.Obtener ejercicios con menos de 50 puntos o las preguntas con más de 70 puntos
+
+
+=========================================================================
+
+
+3.4 Filtrar Documentos Condiciones sobre arrays
+====================================================
+1. Cargar ../3.2.CondicionesArrays/cargaPreferenciasGimnasio.js
+load ("/ejemplos/3.1.OperacionesLectura/3.2.CondicionesArrays/cargaPreferenciasGimnasio.js")
+Clientes que han mostrado preferencia por el padel
+>db.gimnasio.find( {preferencias : "Padel" } )
+
+Cuantos Clientes han mostrado preferencia por la natación o el aquagym	------------>221
+>db.gimnasio2.find( {
+	preferencias : {
+		$in : ["Natación","Aquagym"]
+	} 
+} ).count()
+
+Clientes que han mostrado preferencias por tenis y padel
+> db.gimnasio.find( {preferencias : {$all : ["Tenis","Padel"]} } )
+
+Clientes que han mostrado preferencias en dos deportes
+> db.gimnasio.find( {preferencias : {$size : 2}  )
+
+clientes que han mostrado interés por la natación y el aquagym, pero no por el baloncesto
+db.gimnasio.find( {
+	$and : [ 
+		{ preferencias : 
+			{ $all : [ "Natación" , "Aquagym" ] } 
+		} , 
+		{ preferencias : 
+			{ $ne : "Baloncesto" } 
+		} 
+	] 
+} )
+
+===============			Ejercicio 		================================
+3. Cargar datosImportarGimnasio.json de c:/cargas/3.1.OperacionesLectura/3.2.CondicionesArrays
+¿Cuántas personas han mostrado interés por el tenis y el padel, pero no por el aquagym ni la natación?
+
+
+3.5 Notacion del punto
+=============================================================
++Sobre la carga del fichero ..\3.1 Operaciones Lectura\3.3.NotacionPunto\cargaPuntuaciones2.js
+
+load ("/ejemplos/3.1.OperacionesLectura/3.3.NotacionPunto/cargaPuntuaciones2.js")
+
+<!-- Para acceder a un campo del array -->
+>db.puntuaciones2.find ({"puntuaciones.examen" : {$gt:70}})
+>db.puntuaciones2.find ({"puntuaciones.examen" : {$gt:90}}).count()
+
+
+
+Ejercicio 3.5.1
+---------------------------------------------------------------
++Sobre la carga del fichero ..\3.1 Operaciones Lectura\3.3.NotacionPunto\cargaPuntuaciones3.js
+
+load ("/ejemplos/3.1.OperacionesLectura/3.3.NotacionPunto/cargaPuntuaciones3.js")

@@ -1,0 +1,500 @@
+{ "_id" : { "$oid" : "5318bed1d2550240c5629b4c" }, "idCliente" : 1, "fechaAlta" : { "$date" : 1394130641276 }, "preferencias" : [ "Baloncesto", "Aerobic", "Natación", "Aerobic" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629b4d" }, "idCliente" : 2, "fechaAlta" : { "$date" : 1394130641277 }, "preferencias" : [ "Elíptica" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629b4e" }, "idCliente" : 3, "fechaAlta" : { "$date" : 1394130641277 }, "preferencias" : [ "Aerobic", "Carrera en cinta", "Spinning", "Natación", "Elíptica" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629b4f" }, "idCliente" : 4, "fechaAlta" : { "$date" : 1394130641277 }, "preferencias" : [ "Padel", "Natación", "Elíptica", "Padel", "Tenis" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629b50" }, "idCliente" : 5, "fechaAlta" : { "$date" : 1394130641277 }, "preferencias" : [ "Spinning" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629b51" }, "idCliente" : 6, "fechaAlta" : { "$date" : 1394130641277 }, "preferencias" : [ "Carrera en cinta" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629b52" }, "idCliente" : 7, "fechaAlta" : { "$date" : 1394130641277 }, "preferencias" : [ "Musculación", "Tenis", "Padel" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629b53" }, "idCliente" : 8, "fechaAlta" : { "$date" : 1394130641277 }, "preferencias" : [ "Padel", "Natación", "Natación", "Aquagym", "Aquagym" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629b54" }, "idCliente" : 9, "fechaAlta" : { "$date" : 1394130641277 }, "preferencias" : [ "Natación", "Natación", "Carrera en cinta", "Aquagym" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629b55" }, "idCliente" : 10, "fechaAlta" : { "$date" : 1394130641277 }, "preferencias" : [ "Aerobic", "Elíptica", "Tenis" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629b56" }, "idCliente" : 11, "fechaAlta" : { "$date" : 1394130641277 }, "preferencias" : [ "Baloncesto" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629b57" }, "idCliente" : 12, "fechaAlta" : { "$date" : 1394130641277 }, "preferencias" : [ "Aquagym" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629b58" }, "idCliente" : 13, "fechaAlta" : { "$date" : 1394130641277 }, "preferencias" : [ "Padel", "Tenis", "Tenis", "Tenis", "Tenis" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629b59" }, "idCliente" : 14, "fechaAlta" : { "$date" : 1394130641277 }, "preferencias" : [ "Tenis", "Carrera en cinta", "Aerobic" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629b5a" }, "idCliente" : 15, "fechaAlta" : { "$date" : 1394130641277 }, "preferencias" : [ "Musculación", "Aerobic" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629b5b" }, "idCliente" : 16, "fechaAlta" : { "$date" : 1394130641277 }, "preferencias" : [ "Baloncesto" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629b5c" }, "idCliente" : 17, "fechaAlta" : { "$date" : 1394130641277 }, "preferencias" : [ "Natación", "Natación", "Spinning", "Natación", "Carrera en cinta" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629b5d" }, "idCliente" : 18, "fechaAlta" : { "$date" : 1394130641277 }, "preferencias" : [ "Baloncesto", "Aquagym", "Aquagym", "Padel", "Aerobic" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629b5e" }, "idCliente" : 19, "fechaAlta" : { "$date" : 1394130641277 }, "preferencias" : [ "Spinning", "Baloncesto", "Baloncesto", "Aquagym", "Padel" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629b5f" }, "idCliente" : 20, "fechaAlta" : { "$date" : 1394130641278 }, "preferencias" : [ "Aerobic", "Aquagym", "Padel", "Padel", "Tenis" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629b60" }, "idCliente" : 21, "fechaAlta" : { "$date" : 1394130641278 }, "preferencias" : [ "Natación" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629b61" }, "idCliente" : 22, "fechaAlta" : { "$date" : 1394130641278 }, "preferencias" : [ "Padel", "Aquagym" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629b62" }, "idCliente" : 23, "fechaAlta" : { "$date" : 1394130641278 }, "preferencias" : [ "Musculación" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629b63" }, "idCliente" : 24, "fechaAlta" : { "$date" : 1394130641278 }, "preferencias" : [ "Aquagym", "Spinning", "Natación" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629b64" }, "idCliente" : 25, "fechaAlta" : { "$date" : 1394130641278 }, "preferencias" : [ "Tenis", "Baloncesto", "Natación", "Elíptica", "Elíptica" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629b65" }, "idCliente" : 26, "fechaAlta" : { "$date" : 1394130641278 }, "preferencias" : [ "Tenis" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629b66" }, "idCliente" : 27, "fechaAlta" : { "$date" : 1394130641278 }, "preferencias" : [ "Carrera en cinta", "Baloncesto" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629b67" }, "idCliente" : 28, "fechaAlta" : { "$date" : 1394130641278 }, "preferencias" : [ "Musculación", "Baloncesto" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629b68" }, "idCliente" : 29, "fechaAlta" : { "$date" : 1394130641278 }, "preferencias" : [ "Musculación" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629b69" }, "idCliente" : 30, "fechaAlta" : { "$date" : 1394130641278 }, "preferencias" : [ "Padel", "Aquagym" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629b6a" }, "idCliente" : 31, "fechaAlta" : { "$date" : 1394130641278 }, "preferencias" : [ "Aerobic", "Musculación" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629b6b" }, "idCliente" : 32, "fechaAlta" : { "$date" : 1394130641278 }, "preferencias" : [ "Natación", "Natación", "Aquagym" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629b6c" }, "idCliente" : 33, "fechaAlta" : { "$date" : 1394130641278 }, "preferencias" : [ "Natación", "Natación", "Elíptica", "Aerobic" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629b6d" }, "idCliente" : 34, "fechaAlta" : { "$date" : 1394130641278 }, "preferencias" : [ "Carrera en cinta" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629b6e" }, "idCliente" : 35, "fechaAlta" : { "$date" : 1394130641279 }, "preferencias" : [ "Spinning", "Aquagym", "Spinning" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629b6f" }, "idCliente" : 36, "fechaAlta" : { "$date" : 1394130641279 }, "preferencias" : [ "Natación", "Natación", "Spinning", "Aerobic" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629b70" }, "idCliente" : 37, "fechaAlta" : { "$date" : 1394130641279 }, "preferencias" : [ "Spinning", "Elíptica", "Carrera en cinta" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629b71" }, "idCliente" : 38, "fechaAlta" : { "$date" : 1394130641279 }, "preferencias" : [ "Aerobic" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629b72" }, "idCliente" : 39, "fechaAlta" : { "$date" : 1394130641279 }, "preferencias" : [ "Aerobic" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629b73" }, "idCliente" : 40, "fechaAlta" : { "$date" : 1394130641279 }, "preferencias" : [ "Baloncesto", "Musculación" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629b74" }, "idCliente" : 41, "fechaAlta" : { "$date" : 1394130641279 }, "preferencias" : [ "Elíptica" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629b75" }, "idCliente" : 42, "fechaAlta" : { "$date" : 1394130641279 }, "preferencias" : [ "Tenis", "Padel", "Tenis" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629b76" }, "idCliente" : 43, "fechaAlta" : { "$date" : 1394130641279 }, "preferencias" : [ "Spinning", "Tenis", "Carrera en cinta", "Aerobic", "Aerobic" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629b77" }, "idCliente" : 44, "fechaAlta" : { "$date" : 1394130641280 }, "preferencias" : [ "Carrera en cinta", "Aerobic", "Aerobic" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629b78" }, "idCliente" : 45, "fechaAlta" : { "$date" : 1394130641280 }, "preferencias" : [ "Tenis" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629b79" }, "idCliente" : 46, "fechaAlta" : { "$date" : 1394130641281 }, "preferencias" : [ "Musculación", "Baloncesto", "Spinning", "Tenis", "Padel" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629b7a" }, "idCliente" : 47, "fechaAlta" : { "$date" : 1394130641281 }, "preferencias" : [ "Natación", "Spinning", "Natación", "Musculación" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629b7b" }, "idCliente" : 48, "fechaAlta" : { "$date" : 1394130641281 }, "preferencias" : [ "Aquagym", "Aquagym", "Spinning", "Musculación", "Musculación" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629b7c" }, "idCliente" : 49, "fechaAlta" : { "$date" : 1394130641281 }, "preferencias" : [ "Spinning", "Baloncesto", "Baloncesto", "Natación" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629b7d" }, "idCliente" : 50, "fechaAlta" : { "$date" : 1394130641281 }, "preferencias" : [ "Natación", "Musculación", "Padel", "Spinning" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629b7e" }, "idCliente" : 51, "fechaAlta" : { "$date" : 1394130641281 }, "preferencias" : [ "Padel", "Spinning", "Baloncesto", "Padel", "Aquagym" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629b7f" }, "idCliente" : 52, "fechaAlta" : { "$date" : 1394130641281 }, "preferencias" : [ "Carrera en cinta" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629b80" }, "idCliente" : 53, "fechaAlta" : { "$date" : 1394130641281 }, "preferencias" : [ "Natación", "Padel", "Natación", "Spinning" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629b81" }, "idCliente" : 54, "fechaAlta" : { "$date" : 1394130641281 }, "preferencias" : [ "Natación", "Tenis", "Baloncesto", "Padel", "Carrera en cinta" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629b82" }, "idCliente" : 55, "fechaAlta" : { "$date" : 1394130641281 }, "preferencias" : [ "Elíptica", "Natación", "Carrera en cinta" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629b83" }, "idCliente" : 56, "fechaAlta" : { "$date" : 1394130641281 }, "preferencias" : [ "Aerobic", "Padel" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629b84" }, "idCliente" : 57, "fechaAlta" : { "$date" : 1394130641281 }, "preferencias" : [ "Tenis", "Aerobic", "Padel" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629b85" }, "idCliente" : 58, "fechaAlta" : { "$date" : 1394130641281 }, "preferencias" : [ "Carrera en cinta", "Baloncesto", "Carrera en cinta", "Elíptica", "Natación" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629b86" }, "idCliente" : 59, "fechaAlta" : { "$date" : 1394130641281 }, "preferencias" : [ "Natación" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629b87" }, "idCliente" : 60, "fechaAlta" : { "$date" : 1394130641281 }, "preferencias" : [ "Carrera en cinta", "Elíptica" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629b88" }, "idCliente" : 61, "fechaAlta" : { "$date" : 1394130641281 }, "preferencias" : [ "Musculación", "Elíptica", "Tenis" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629b89" }, "idCliente" : 62, "fechaAlta" : { "$date" : 1394130641281 }, "preferencias" : [ "Baloncesto", "Aquagym", "Natación", "Aquagym", "Natación" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629b8a" }, "idCliente" : 63, "fechaAlta" : { "$date" : 1394130641281 }, "preferencias" : [ "Musculación" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629b8b" }, "idCliente" : 64, "fechaAlta" : { "$date" : 1394130641281 }, "preferencias" : [ "Natación", "Aerobic", "Baloncesto", "Elíptica" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629b8c" }, "idCliente" : 65, "fechaAlta" : { "$date" : 1394130641281 }, "preferencias" : [ "Carrera en cinta", "Padel" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629b8d" }, "idCliente" : 66, "fechaAlta" : { "$date" : 1394130641281 }, "preferencias" : [ "Spinning", "Aquagym", "Natación", "Baloncesto" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629b8e" }, "idCliente" : 67, "fechaAlta" : { "$date" : 1394130641281 }, "preferencias" : [ "Carrera en cinta", "Natación" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629b8f" }, "idCliente" : 68, "fechaAlta" : { "$date" : 1394130641281 }, "preferencias" : [ "Natación", "Tenis" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629b90" }, "idCliente" : 69, "fechaAlta" : { "$date" : 1394130641281 }, "preferencias" : [ "Musculación", "Aquagym", "Aerobic" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629b91" }, "idCliente" : 70, "fechaAlta" : { "$date" : 1394130641281 }, "preferencias" : [ "Padel" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629b92" }, "idCliente" : 71, "fechaAlta" : { "$date" : 1394130641281 }, "preferencias" : [ "Padel", "Aquagym" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629b93" }, "idCliente" : 72, "fechaAlta" : { "$date" : 1394130641281 }, "preferencias" : [ "Tenis", "Spinning", "Spinning" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629b94" }, "idCliente" : 73, "fechaAlta" : { "$date" : 1394130641281 }, "preferencias" : [ "Carrera en cinta" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629b95" }, "idCliente" : 74, "fechaAlta" : { "$date" : 1394130641281 }, "preferencias" : [ "Spinning", "Elíptica", "Musculación" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629b96" }, "idCliente" : 75, "fechaAlta" : { "$date" : 1394130641282 }, "preferencias" : [ "Aerobic", "Aquagym" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629b97" }, "idCliente" : 76, "fechaAlta" : { "$date" : 1394130641282 }, "preferencias" : [ "Aerobic", "Aerobic", "Natación", "Elíptica", "Natación" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629b98" }, "idCliente" : 77, "fechaAlta" : { "$date" : 1394130641282 }, "preferencias" : [ "Aquagym", "Elíptica" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629b99" }, "idCliente" : 78, "fechaAlta" : { "$date" : 1394130641282 }, "preferencias" : [ "Padel", "Padel", "Carrera en cinta", "Musculación" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629b9a" }, "idCliente" : 79, "fechaAlta" : { "$date" : 1394130641282 }, "preferencias" : [ "Tenis" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629b9b" }, "idCliente" : 80, "fechaAlta" : { "$date" : 1394130641282 }, "preferencias" : [ "Padel" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629b9c" }, "idCliente" : 81, "fechaAlta" : { "$date" : 1394130641282 }, "preferencias" : [ "Musculación" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629b9d" }, "idCliente" : 82, "fechaAlta" : { "$date" : 1394130641282 }, "preferencias" : [ "Tenis", "Carrera en cinta", "Baloncesto", "Aquagym" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629b9e" }, "idCliente" : 83, "fechaAlta" : { "$date" : 1394130641282 }, "preferencias" : [ "Aerobic", "Baloncesto" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629b9f" }, "idCliente" : 84, "fechaAlta" : { "$date" : 1394130641282 }, "preferencias" : [ "Padel", "Natación", "Carrera en cinta", "Tenis", "Musculación" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629ba0" }, "idCliente" : 85, "fechaAlta" : { "$date" : 1394130641282 }, "preferencias" : [ "Aerobic", "Elíptica", "Tenis", "Elíptica" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629ba1" }, "idCliente" : 86, "fechaAlta" : { "$date" : 1394130641282 }, "preferencias" : [ "Aquagym", "Aquagym", "Natación", "Elíptica" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629ba2" }, "idCliente" : 87, "fechaAlta" : { "$date" : 1394130641282 }, "preferencias" : [ "Elíptica", "Padel", "Natación" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629ba3" }, "idCliente" : 88, "fechaAlta" : { "$date" : 1394130641282 }, "preferencias" : [ "Baloncesto", "Tenis", "Natación" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629ba4" }, "idCliente" : 89, "fechaAlta" : { "$date" : 1394130641282 }, "preferencias" : [ "Padel" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629ba5" }, "idCliente" : 90, "fechaAlta" : { "$date" : 1394130641282 }, "preferencias" : [ "Musculación" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629ba6" }, "idCliente" : 91, "fechaAlta" : { "$date" : 1394130641282 }, "preferencias" : [ "Aquagym", "Spinning", "Aerobic", "Aquagym", "Baloncesto" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629ba7" }, "idCliente" : 92, "fechaAlta" : { "$date" : 1394130641282 }, "preferencias" : [ "Tenis", "Aquagym", "Aerobic" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629ba8" }, "idCliente" : 93, "fechaAlta" : { "$date" : 1394130641282 }, "preferencias" : [ "Aquagym", "Baloncesto", "Padel" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629ba9" }, "idCliente" : 94, "fechaAlta" : { "$date" : 1394130641282 }, "preferencias" : [ "Spinning" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629baa" }, "idCliente" : 95, "fechaAlta" : { "$date" : 1394130641282 }, "preferencias" : [ "Natación", "Musculación", "Musculación" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629bab" }, "idCliente" : 96, "fechaAlta" : { "$date" : 1394130641282 }, "preferencias" : [ "Carrera en cinta" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629bac" }, "idCliente" : 97, "fechaAlta" : { "$date" : 1394130641282 }, "preferencias" : [ "Tenis", "Spinning", "Elíptica" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629bad" }, "idCliente" : 98, "fechaAlta" : { "$date" : 1394130641282 }, "preferencias" : [ "Aerobic", "Carrera en cinta", "Elíptica" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629bae" }, "idCliente" : 99, "fechaAlta" : { "$date" : 1394130641282 }, "preferencias" : [ "Elíptica", "Aerobic", "Aerobic", "Padel" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629baf" }, "idCliente" : 100, "fechaAlta" : { "$date" : 1394130641282 }, "preferencias" : [ "Baloncesto" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629bb0" }, "idCliente" : 101, "fechaAlta" : { "$date" : 1394130641282 }, "preferencias" : [ "Natación", "Aquagym" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629bb1" }, "idCliente" : 102, "fechaAlta" : { "$date" : 1394130641282 }, "preferencias" : [ "Musculación", "Aerobic", "Natación", "Natación" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629bb2" }, "idCliente" : 103, "fechaAlta" : { "$date" : 1394130641282 }, "preferencias" : [ "Baloncesto", "Baloncesto" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629bb3" }, "idCliente" : 104, "fechaAlta" : { "$date" : 1394130641282 }, "preferencias" : [ "Padel", "Carrera en cinta", "Padel", "Carrera en cinta" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629bb4" }, "idCliente" : 105, "fechaAlta" : { "$date" : 1394130641282 }, "preferencias" : [ "Elíptica", "Natación" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629bb5" }, "idCliente" : 106, "fechaAlta" : { "$date" : 1394130641282 }, "preferencias" : [ "Spinning", "Natación" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629bb6" }, "idCliente" : 107, "fechaAlta" : { "$date" : 1394130641282 }, "preferencias" : [ "Spinning" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629bb7" }, "idCliente" : 108, "fechaAlta" : { "$date" : 1394130641282 }, "preferencias" : [ "Aquagym", "Natación", "Aerobic", "Baloncesto" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629bb8" }, "idCliente" : 109, "fechaAlta" : { "$date" : 1394130641282 }, "preferencias" : [ "Baloncesto", "Carrera en cinta", "Carrera en cinta", "Baloncesto", "Aerobic" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629bb9" }, "idCliente" : 110, "fechaAlta" : { "$date" : 1394130641283 }, "preferencias" : [ "Natación", "Aerobic", "Spinning", "Elíptica" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629bba" }, "idCliente" : 111, "fechaAlta" : { "$date" : 1394130641283 }, "preferencias" : [ "Tenis", "Natación", "Musculación", "Tenis" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629bbb" }, "idCliente" : 112, "fechaAlta" : { "$date" : 1394130641283 }, "preferencias" : [ "Baloncesto", "Padel" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629bbc" }, "idCliente" : 113, "fechaAlta" : { "$date" : 1394130641283 }, "preferencias" : [ "Spinning", "Aquagym", "Aerobic" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629bbd" }, "idCliente" : 114, "fechaAlta" : { "$date" : 1394130641283 }, "preferencias" : [ "Baloncesto", "Carrera en cinta", "Spinning", "Aquagym", "Aquagym" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629bbe" }, "idCliente" : 115, "fechaAlta" : { "$date" : 1394130641283 }, "preferencias" : [ "Musculación" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629bbf" }, "idCliente" : 116, "fechaAlta" : { "$date" : 1394130641283 }, "preferencias" : [ "Padel", "Baloncesto", "Baloncesto" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629bc0" }, "idCliente" : 117, "fechaAlta" : { "$date" : 1394130641283 }, "preferencias" : [ "Carrera en cinta" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629bc1" }, "idCliente" : 118, "fechaAlta" : { "$date" : 1394130641283 }, "preferencias" : [ "Baloncesto", "Tenis" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629bc2" }, "idCliente" : 119, "fechaAlta" : { "$date" : 1394130641283 }, "preferencias" : [ "Baloncesto" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629bc3" }, "idCliente" : 120, "fechaAlta" : { "$date" : 1394130641283 }, "preferencias" : [ "Musculación", "Baloncesto", "Aquagym" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629bc4" }, "idCliente" : 121, "fechaAlta" : { "$date" : 1394130641283 }, "preferencias" : [ "Spinning", "Natación" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629bc5" }, "idCliente" : 122, "fechaAlta" : { "$date" : 1394130641283 }, "preferencias" : [ "Padel", "Elíptica", "Aquagym", "Tenis", "Tenis" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629bc6" }, "idCliente" : 123, "fechaAlta" : { "$date" : 1394130641283 }, "preferencias" : [ "Spinning", "Musculación", "Natación", "Musculación" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629bc7" }, "idCliente" : 124, "fechaAlta" : { "$date" : 1394130641283 }, "preferencias" : [ "Carrera en cinta" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629bc8" }, "idCliente" : 125, "fechaAlta" : { "$date" : 1394130641283 }, "preferencias" : [ "Musculación", "Aquagym", "Carrera en cinta", "Padel" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629bc9" }, "idCliente" : 126, "fechaAlta" : { "$date" : 1394130641283 }, "preferencias" : [ "Carrera en cinta", "Musculación", "Spinning", "Elíptica" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629bca" }, "idCliente" : 127, "fechaAlta" : { "$date" : 1394130641283 }, "preferencias" : [ "Aquagym", "Spinning" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629bcb" }, "idCliente" : 128, "fechaAlta" : { "$date" : 1394130641283 }, "preferencias" : [ "Elíptica", "Tenis", "Tenis", "Spinning", "Tenis" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629bcc" }, "idCliente" : 129, "fechaAlta" : { "$date" : 1394130641283 }, "preferencias" : [ "Baloncesto", "Padel" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629bcd" }, "idCliente" : 130, "fechaAlta" : { "$date" : 1394130641283 }, "preferencias" : [ "Natación", "Elíptica" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629bce" }, "idCliente" : 131, "fechaAlta" : { "$date" : 1394130641283 }, "preferencias" : [ "Tenis" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629bcf" }, "idCliente" : 132, "fechaAlta" : { "$date" : 1394130641283 }, "preferencias" : [ "Elíptica", "Aerobic" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629bd0" }, "idCliente" : 133, "fechaAlta" : { "$date" : 1394130641283 }, "preferencias" : [ "Tenis", "Aquagym" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629bd1" }, "idCliente" : 134, "fechaAlta" : { "$date" : 1394130641283 }, "preferencias" : [ "Aerobic" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629bd2" }, "idCliente" : 135, "fechaAlta" : { "$date" : 1394130641283 }, "preferencias" : [ "Elíptica", "Baloncesto", "Padel", "Tenis", "Elíptica" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629bd3" }, "idCliente" : 136, "fechaAlta" : { "$date" : 1394130641283 }, "preferencias" : [ "Musculación" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629bd4" }, "idCliente" : 137, "fechaAlta" : { "$date" : 1394130641283 }, "preferencias" : [ "Aquagym", "Tenis" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629bd5" }, "idCliente" : 138, "fechaAlta" : { "$date" : 1394130641283 }, "preferencias" : [ "Musculación" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629bd6" }, "idCliente" : 139, "fechaAlta" : { "$date" : 1394130641283 }, "preferencias" : [ "Aerobic", "Padel", "Spinning" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629bd7" }, "idCliente" : 140, "fechaAlta" : { "$date" : 1394130641283 }, "preferencias" : [ "Carrera en cinta", "Carrera en cinta", "Elíptica", "Carrera en cinta" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629bd8" }, "idCliente" : 141, "fechaAlta" : { "$date" : 1394130641283 }, "preferencias" : [ "Carrera en cinta", "Musculación", "Natación", "Carrera en cinta", "Aquagym" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629bd9" }, "idCliente" : 142, "fechaAlta" : { "$date" : 1394130641283 }, "preferencias" : [ "Padel", "Spinning", "Baloncesto" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629bda" }, "idCliente" : 143, "fechaAlta" : { "$date" : 1394130641283 }, "preferencias" : [ "Padel" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629bdb" }, "idCliente" : 144, "fechaAlta" : { "$date" : 1394130641283 }, "preferencias" : [ "Elíptica" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629bdc" }, "idCliente" : 145, "fechaAlta" : { "$date" : 1394130641283 }, "preferencias" : [ "Tenis", "Aquagym", "Natación", "Natación" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629bdd" }, "idCliente" : 146, "fechaAlta" : { "$date" : 1394130641283 }, "preferencias" : [ "Musculación", "Baloncesto", "Elíptica", "Musculación", "Padel" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629bde" }, "idCliente" : 147, "fechaAlta" : { "$date" : 1394130641284 }, "preferencias" : [ "Elíptica" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629bdf" }, "idCliente" : 148, "fechaAlta" : { "$date" : 1394130641284 }, "preferencias" : [ "Natación", "Aerobic", "Elíptica", "Aquagym" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629be0" }, "idCliente" : 149, "fechaAlta" : { "$date" : 1394130641284 }, "preferencias" : [ "Padel", "Aquagym", "Carrera en cinta", "Natación", "Natación" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629be1" }, "idCliente" : 150, "fechaAlta" : { "$date" : 1394130641284 }, "preferencias" : [ "Carrera en cinta", "Carrera en cinta", "Musculación" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629be2" }, "idCliente" : 151, "fechaAlta" : { "$date" : 1394130641287 }, "preferencias" : [ "Tenis", "Baloncesto", "Elíptica" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629be3" }, "idCliente" : 152, "fechaAlta" : { "$date" : 1394130641287 }, "preferencias" : [ "Tenis", "Natación", "Carrera en cinta" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629be4" }, "idCliente" : 153, "fechaAlta" : { "$date" : 1394130641287 }, "preferencias" : [ "Elíptica" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629be5" }, "idCliente" : 154, "fechaAlta" : { "$date" : 1394130641287 }, "preferencias" : [ "Baloncesto", "Tenis", "Spinning", "Aerobic", "Aquagym" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629be6" }, "idCliente" : 155, "fechaAlta" : { "$date" : 1394130641287 }, "preferencias" : [ "Tenis" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629be7" }, "idCliente" : 156, "fechaAlta" : { "$date" : 1394130641287 }, "preferencias" : [ "Spinning", "Aquagym", "Aquagym", "Musculación", "Baloncesto" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629be8" }, "idCliente" : 157, "fechaAlta" : { "$date" : 1394130641287 }, "preferencias" : [ "Spinning", "Aerobic", "Aquagym" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629be9" }, "idCliente" : 158, "fechaAlta" : { "$date" : 1394130641287 }, "preferencias" : [ "Elíptica" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629bea" }, "idCliente" : 159, "fechaAlta" : { "$date" : 1394130641287 }, "preferencias" : [ "Tenis" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629beb" }, "idCliente" : 160, "fechaAlta" : { "$date" : 1394130641287 }, "preferencias" : [ "Aquagym", "Carrera en cinta", "Carrera en cinta", "Padel", "Spinning" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629bec" }, "idCliente" : 161, "fechaAlta" : { "$date" : 1394130641287 }, "preferencias" : [ "Tenis" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629bed" }, "idCliente" : 162, "fechaAlta" : { "$date" : 1394130641287 }, "preferencias" : [ "Musculación", "Carrera en cinta", "Aerobic" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629bee" }, "idCliente" : 163, "fechaAlta" : { "$date" : 1394130641287 }, "preferencias" : [ "Baloncesto", "Aquagym", "Carrera en cinta", "Spinning", "Padel" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629bef" }, "idCliente" : 164, "fechaAlta" : { "$date" : 1394130641287 }, "preferencias" : [ "Aerobic", "Carrera en cinta" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629bf0" }, "idCliente" : 165, "fechaAlta" : { "$date" : 1394130641287 }, "preferencias" : [ "Tenis", "Musculación", "Carrera en cinta", "Musculación" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629bf1" }, "idCliente" : 166, "fechaAlta" : { "$date" : 1394130641288 }, "preferencias" : [ "Elíptica", "Elíptica", "Carrera en cinta", "Aquagym", "Aquagym" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629bf2" }, "idCliente" : 167, "fechaAlta" : { "$date" : 1394130641288 }, "preferencias" : [ "Carrera en cinta", "Padel", "Baloncesto", "Baloncesto" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629bf3" }, "idCliente" : 168, "fechaAlta" : { "$date" : 1394130641288 }, "preferencias" : [ "Tenis", "Tenis", "Elíptica" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629bf4" }, "idCliente" : 169, "fechaAlta" : { "$date" : 1394130641288 }, "preferencias" : [ "Musculación", "Tenis", "Carrera en cinta" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629bf5" }, "idCliente" : 170, "fechaAlta" : { "$date" : 1394130641288 }, "preferencias" : [ "Aquagym", "Musculación", "Padel" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629bf6" }, "idCliente" : 171, "fechaAlta" : { "$date" : 1394130641288 }, "preferencias" : [ "Aquagym", "Padel", "Aerobic", "Tenis", "Spinning" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629bf7" }, "idCliente" : 172, "fechaAlta" : { "$date" : 1394130641288 }, "preferencias" : [ "Elíptica", "Natación", "Carrera en cinta", "Aerobic", "Carrera en cinta" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629bf8" }, "idCliente" : 173, "fechaAlta" : { "$date" : 1394130641288 }, "preferencias" : [ "Spinning", "Carrera en cinta", "Natación", "Baloncesto", "Aquagym" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629bf9" }, "idCliente" : 174, "fechaAlta" : { "$date" : 1394130641288 }, "preferencias" : [ "Padel" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629bfa" }, "idCliente" : 175, "fechaAlta" : { "$date" : 1394130641288 }, "preferencias" : [ "Baloncesto" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629bfb" }, "idCliente" : 176, "fechaAlta" : { "$date" : 1394130641288 }, "preferencias" : [ "Aerobic", "Musculación", "Musculación", "Baloncesto" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629bfc" }, "idCliente" : 177, "fechaAlta" : { "$date" : 1394130641288 }, "preferencias" : [ "Musculación", "Tenis", "Aerobic", "Aerobic", "Elíptica" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629bfd" }, "idCliente" : 178, "fechaAlta" : { "$date" : 1394130641288 }, "preferencias" : [ "Aquagym", "Spinning", "Baloncesto", "Padel", "Musculación" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629bfe" }, "idCliente" : 179, "fechaAlta" : { "$date" : 1394130641288 }, "preferencias" : [ "Natación", "Padel", "Aquagym", "Elíptica", "Elíptica" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629bff" }, "idCliente" : 180, "fechaAlta" : { "$date" : 1394130641288 }, "preferencias" : [ "Aerobic" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c00" }, "idCliente" : 181, "fechaAlta" : { "$date" : 1394130641288 }, "preferencias" : [ "Elíptica", "Baloncesto" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c01" }, "idCliente" : 182, "fechaAlta" : { "$date" : 1394130641288 }, "preferencias" : [ "Padel", "Padel", "Padel", "Musculación" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c02" }, "idCliente" : 183, "fechaAlta" : { "$date" : 1394130641288 }, "preferencias" : [ "Carrera en cinta", "Aerobic", "Baloncesto" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c03" }, "idCliente" : 184, "fechaAlta" : { "$date" : 1394130641288 }, "preferencias" : [ "Carrera en cinta", "Carrera en cinta", "Tenis", "Aquagym" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c04" }, "idCliente" : 185, "fechaAlta" : { "$date" : 1394130641288 }, "preferencias" : [ "Elíptica" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c05" }, "idCliente" : 186, "fechaAlta" : { "$date" : 1394130641288 }, "preferencias" : [ "Spinning", "Padel" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c06" }, "idCliente" : 187, "fechaAlta" : { "$date" : 1394130641288 }, "preferencias" : [ "Musculación" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c07" }, "idCliente" : 188, "fechaAlta" : { "$date" : 1394130641288 }, "preferencias" : [ "Carrera en cinta", "Aquagym", "Spinning" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c08" }, "idCliente" : 189, "fechaAlta" : { "$date" : 1394130641288 }, "preferencias" : [ "Aerobic" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c09" }, "idCliente" : 190, "fechaAlta" : { "$date" : 1394130641288 }, "preferencias" : [ "Elíptica", "Aerobic", "Aerobic", "Padel" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c0a" }, "idCliente" : 191, "fechaAlta" : { "$date" : 1394130641288 }, "preferencias" : [ "Aquagym", "Natación" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c0b" }, "idCliente" : 192, "fechaAlta" : { "$date" : 1394130641288 }, "preferencias" : [ "Spinning", "Tenis", "Tenis" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c0c" }, "idCliente" : 193, "fechaAlta" : { "$date" : 1394130641288 }, "preferencias" : [ "Carrera en cinta", "Tenis", "Baloncesto", "Aerobic" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c0d" }, "idCliente" : 194, "fechaAlta" : { "$date" : 1394130641288 }, "preferencias" : [ "Elíptica", "Baloncesto", "Spinning" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c0e" }, "idCliente" : 195, "fechaAlta" : { "$date" : 1394130641288 }, "preferencias" : [ "Elíptica", "Baloncesto", "Spinning", "Aerobic", "Spinning" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c0f" }, "idCliente" : 196, "fechaAlta" : { "$date" : 1394130641288 }, "preferencias" : [ "Aerobic", "Baloncesto", "Spinning", "Aquagym", "Padel" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c10" }, "idCliente" : 197, "fechaAlta" : { "$date" : 1394130641288 }, "preferencias" : [ "Aerobic" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c11" }, "idCliente" : 198, "fechaAlta" : { "$date" : 1394130641288 }, "preferencias" : [ "Baloncesto" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c12" }, "idCliente" : 199, "fechaAlta" : { "$date" : 1394130641288 }, "preferencias" : [ "Baloncesto", "Tenis", "Natación", "Aerobic", "Natación" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c13" }, "idCliente" : 200, "fechaAlta" : { "$date" : 1394130641288 }, "preferencias" : [ "Elíptica", "Spinning" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c14" }, "idCliente" : 201, "fechaAlta" : { "$date" : 1394130641288 }, "preferencias" : [ "Elíptica", "Musculación", "Tenis", "Aquagym", "Aquagym" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c15" }, "idCliente" : 202, "fechaAlta" : { "$date" : 1394130641288 }, "preferencias" : [ "Baloncesto", "Aquagym", "Aerobic", "Musculación" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c16" }, "idCliente" : 203, "fechaAlta" : { "$date" : 1394130641288 }, "preferencias" : [ "Spinning", "Musculación" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c17" }, "idCliente" : 204, "fechaAlta" : { "$date" : 1394130641289 }, "preferencias" : [ "Aquagym", "Carrera en cinta" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c18" }, "idCliente" : 205, "fechaAlta" : { "$date" : 1394130641289 }, "preferencias" : [ "Padel", "Elíptica", "Tenis", "Aerobic", "Aquagym" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c19" }, "idCliente" : 206, "fechaAlta" : { "$date" : 1394130641289 }, "preferencias" : [ "Padel", "Spinning", "Carrera en cinta", "Carrera en cinta", "Padel" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c1a" }, "idCliente" : 207, "fechaAlta" : { "$date" : 1394130641289 }, "preferencias" : [ "Aquagym", "Tenis", "Tenis", "Carrera en cinta" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c1b" }, "idCliente" : 208, "fechaAlta" : { "$date" : 1394130641289 }, "preferencias" : [ "Natación", "Aerobic", "Aerobic", "Musculación", "Aerobic" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c1c" }, "idCliente" : 209, "fechaAlta" : { "$date" : 1394130641289 }, "preferencias" : [ "Spinning", "Aerobic", "Aerobic" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c1d" }, "idCliente" : 210, "fechaAlta" : { "$date" : 1394130641289 }, "preferencias" : [ "Tenis", "Baloncesto", "Aquagym", "Tenis", "Elíptica" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c1e" }, "idCliente" : 211, "fechaAlta" : { "$date" : 1394130641289 }, "preferencias" : [ "Spinning", "Musculación", "Baloncesto", "Baloncesto" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c1f" }, "idCliente" : 212, "fechaAlta" : { "$date" : 1394130641289 }, "preferencias" : [ "Baloncesto" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c20" }, "idCliente" : 213, "fechaAlta" : { "$date" : 1394130641289 }, "preferencias" : [ "Carrera en cinta", "Baloncesto", "Aquagym" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c21" }, "idCliente" : 214, "fechaAlta" : { "$date" : 1394130641289 }, "preferencias" : [ "Natación", "Tenis" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c22" }, "idCliente" : 215, "fechaAlta" : { "$date" : 1394130641289 }, "preferencias" : [ "Musculación" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c23" }, "idCliente" : 216, "fechaAlta" : { "$date" : 1394130641289 }, "preferencias" : [ "Aquagym", "Musculación" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c24" }, "idCliente" : 217, "fechaAlta" : { "$date" : 1394130641289 }, "preferencias" : [ "Padel", "Aquagym", "Spinning", "Aerobic", "Tenis" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c25" }, "idCliente" : 218, "fechaAlta" : { "$date" : 1394130641289 }, "preferencias" : [ "Aquagym", "Aquagym" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c26" }, "idCliente" : 219, "fechaAlta" : { "$date" : 1394130641289 }, "preferencias" : [ "Aerobic" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c27" }, "idCliente" : 220, "fechaAlta" : { "$date" : 1394130641289 }, "preferencias" : [ "Tenis", "Musculación", "Baloncesto" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c28" }, "idCliente" : 221, "fechaAlta" : { "$date" : 1394130641289 }, "preferencias" : [ "Elíptica", "Baloncesto", "Musculación", "Aerobic" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c29" }, "idCliente" : 222, "fechaAlta" : { "$date" : 1394130641289 }, "preferencias" : [ "Natación", "Baloncesto", "Elíptica", "Tenis" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c2a" }, "idCliente" : 223, "fechaAlta" : { "$date" : 1394130641289 }, "preferencias" : [ "Tenis", "Elíptica", "Spinning", "Aerobic" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c2b" }, "idCliente" : 224, "fechaAlta" : { "$date" : 1394130641289 }, "preferencias" : [ "Elíptica" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c2c" }, "idCliente" : 225, "fechaAlta" : { "$date" : 1394130641289 }, "preferencias" : [ "Spinning", "Baloncesto", "Elíptica", "Baloncesto" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c2d" }, "idCliente" : 226, "fechaAlta" : { "$date" : 1394130641289 }, "preferencias" : [ "Elíptica" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c2e" }, "idCliente" : 227, "fechaAlta" : { "$date" : 1394130641289 }, "preferencias" : [ "Carrera en cinta", "Baloncesto", "Spinning", "Elíptica", "Natación" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c2f" }, "idCliente" : 228, "fechaAlta" : { "$date" : 1394130641289 }, "preferencias" : [ "Baloncesto", "Padel" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c30" }, "idCliente" : 229, "fechaAlta" : { "$date" : 1394130641289 }, "preferencias" : [ "Padel", "Baloncesto", "Elíptica" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c31" }, "idCliente" : 230, "fechaAlta" : { "$date" : 1394130641289 }, "preferencias" : [ "Padel" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c32" }, "idCliente" : 231, "fechaAlta" : { "$date" : 1394130641289 }, "preferencias" : [ "Tenis", "Padel", "Aerobic", "Padel" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c33" }, "idCliente" : 232, "fechaAlta" : { "$date" : 1394130641289 }, "preferencias" : [ "Musculación" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c34" }, "idCliente" : 233, "fechaAlta" : { "$date" : 1394130641290 }, "preferencias" : [ "Natación", "Aerobic" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c35" }, "idCliente" : 234, "fechaAlta" : { "$date" : 1394130641290 }, "preferencias" : [ "Tenis", "Padel", "Padel", "Padel", "Aerobic" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c36" }, "idCliente" : 235, "fechaAlta" : { "$date" : 1394130641290 }, "preferencias" : [ "Natación", "Natación", "Tenis" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c37" }, "idCliente" : 236, "fechaAlta" : { "$date" : 1394130641290 }, "preferencias" : [ "Elíptica", "Padel" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c38" }, "idCliente" : 237, "fechaAlta" : { "$date" : 1394130641290 }, "preferencias" : [ "Spinning", "Aerobic" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c39" }, "idCliente" : 238, "fechaAlta" : { "$date" : 1394130641290 }, "preferencias" : [ "Carrera en cinta", "Tenis" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c3a" }, "idCliente" : 239, "fechaAlta" : { "$date" : 1394130641290 }, "preferencias" : [ "Aerobic", "Aquagym" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c3b" }, "idCliente" : 240, "fechaAlta" : { "$date" : 1394130641290 }, "preferencias" : [ "Natación", "Natación" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c3c" }, "idCliente" : 241, "fechaAlta" : { "$date" : 1394130641290 }, "preferencias" : [ "Natación", "Elíptica", "Elíptica", "Spinning" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c3d" }, "idCliente" : 242, "fechaAlta" : { "$date" : 1394130641290 }, "preferencias" : [ "Natación", "Spinning" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c3e" }, "idCliente" : 243, "fechaAlta" : { "$date" : 1394130641290 }, "preferencias" : [ "Padel", "Tenis", "Musculación", "Aquagym", "Carrera en cinta" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c3f" }, "idCliente" : 244, "fechaAlta" : { "$date" : 1394130641290 }, "preferencias" : [ "Carrera en cinta", "Carrera en cinta", "Spinning", "Aerobic", "Spinning" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c40" }, "idCliente" : 245, "fechaAlta" : { "$date" : 1394130641290 }, "preferencias" : [ "Natación", "Baloncesto" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c41" }, "idCliente" : 246, "fechaAlta" : { "$date" : 1394130641290 }, "preferencias" : [ "Spinning", "Tenis", "Baloncesto", "Aerobic", "Baloncesto" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c42" }, "idCliente" : 247, "fechaAlta" : { "$date" : 1394130641290 }, "preferencias" : [ "Spinning", "Baloncesto", "Tenis", "Elíptica", "Baloncesto" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c43" }, "idCliente" : 248, "fechaAlta" : { "$date" : 1394130641290 }, "preferencias" : [ "Carrera en cinta", "Spinning", "Baloncesto", "Tenis" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c44" }, "idCliente" : 249, "fechaAlta" : { "$date" : 1394130641290 }, "preferencias" : [ "Baloncesto", "Spinning", "Spinning", "Natación", "Tenis" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c45" }, "idCliente" : 250, "fechaAlta" : { "$date" : 1394130641290 }, "preferencias" : [ "Aerobic", "Tenis" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c46" }, "idCliente" : 251, "fechaAlta" : { "$date" : 1394130641290 }, "preferencias" : [ "Natación", "Padel" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c47" }, "idCliente" : 252, "fechaAlta" : { "$date" : 1394130641290 }, "preferencias" : [ "Padel", "Spinning" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c48" }, "idCliente" : 253, "fechaAlta" : { "$date" : 1394130641290 }, "preferencias" : [ "Aquagym", "Padel", "Spinning", "Aerobic", "Padel" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c49" }, "idCliente" : 254, "fechaAlta" : { "$date" : 1394130641290 }, "preferencias" : [ "Natación", "Padel", "Musculación" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c4a" }, "idCliente" : 255, "fechaAlta" : { "$date" : 1394130641290 }, "preferencias" : [ "Aquagym", "Tenis", "Aquagym", "Spinning", "Aerobic" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c4b" }, "idCliente" : 256, "fechaAlta" : { "$date" : 1394130641290 }, "preferencias" : [ "Aerobic", "Carrera en cinta", "Aerobic", "Aquagym", "Carrera en cinta" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c4c" }, "idCliente" : 257, "fechaAlta" : { "$date" : 1394130641290 }, "preferencias" : [ "Elíptica", "Elíptica" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c4d" }, "idCliente" : 258, "fechaAlta" : { "$date" : 1394130641290 }, "preferencias" : [ "Baloncesto" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c4e" }, "idCliente" : 259, "fechaAlta" : { "$date" : 1394130641290 }, "preferencias" : [ "Spinning", "Aquagym" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c4f" }, "idCliente" : 260, "fechaAlta" : { "$date" : 1394130641290 }, "preferencias" : [ "Elíptica", "Carrera en cinta", "Elíptica" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c50" }, "idCliente" : 261, "fechaAlta" : { "$date" : 1394130641290 }, "preferencias" : [ "Aquagym", "Natación", "Carrera en cinta" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c51" }, "idCliente" : 262, "fechaAlta" : { "$date" : 1394130641290 }, "preferencias" : [ "Aerobic", "Baloncesto" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c52" }, "idCliente" : 263, "fechaAlta" : { "$date" : 1394130641290 }, "preferencias" : [ "Spinning", "Padel", "Tenis", "Spinning", "Elíptica" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c53" }, "idCliente" : 264, "fechaAlta" : { "$date" : 1394130641291 }, "preferencias" : [ "Aquagym" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c54" }, "idCliente" : 265, "fechaAlta" : { "$date" : 1394130641291 }, "preferencias" : [ "Elíptica" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c55" }, "idCliente" : 266, "fechaAlta" : { "$date" : 1394130641291 }, "preferencias" : [ "Aquagym", "Natación", "Spinning" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c56" }, "idCliente" : 267, "fechaAlta" : { "$date" : 1394130641291 }, "preferencias" : [ "Musculación", "Baloncesto", "Aerobic", "Musculación", "Carrera en cinta" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c57" }, "idCliente" : 268, "fechaAlta" : { "$date" : 1394130641291 }, "preferencias" : [ "Elíptica" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c58" }, "idCliente" : 269, "fechaAlta" : { "$date" : 1394130641291 }, "preferencias" : [ "Tenis" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c59" }, "idCliente" : 270, "fechaAlta" : { "$date" : 1394130641291 }, "preferencias" : [ "Tenis", "Baloncesto", "Padel" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c5a" }, "idCliente" : 271, "fechaAlta" : { "$date" : 1394130641291 }, "preferencias" : [ "Musculación", "Aquagym", "Elíptica", "Baloncesto", "Tenis" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c5b" }, "idCliente" : 272, "fechaAlta" : { "$date" : 1394130641291 }, "preferencias" : [ "Natación", "Musculación" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c5c" }, "idCliente" : 273, "fechaAlta" : { "$date" : 1394130641291 }, "preferencias" : [ "Elíptica", "Musculación", "Tenis", "Natación" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c5d" }, "idCliente" : 274, "fechaAlta" : { "$date" : 1394130641291 }, "preferencias" : [ "Musculación", "Aquagym" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c5e" }, "idCliente" : 275, "fechaAlta" : { "$date" : 1394130641291 }, "preferencias" : [ "Elíptica", "Baloncesto", "Aquagym", "Carrera en cinta", "Baloncesto" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c5f" }, "idCliente" : 276, "fechaAlta" : { "$date" : 1394130641291 }, "preferencias" : [ "Aerobic", "Musculación", "Elíptica" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c60" }, "idCliente" : 277, "fechaAlta" : { "$date" : 1394130641291 }, "preferencias" : [ "Tenis" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c61" }, "idCliente" : 278, "fechaAlta" : { "$date" : 1394130641291 }, "preferencias" : [ "Spinning", "Padel", "Carrera en cinta", "Aerobic", "Padel" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c62" }, "idCliente" : 279, "fechaAlta" : { "$date" : 1394130641291 }, "preferencias" : [ "Carrera en cinta", "Spinning", "Aquagym", "Spinning", "Tenis" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c63" }, "idCliente" : 280, "fechaAlta" : { "$date" : 1394130641291 }, "preferencias" : [ "Musculación", "Tenis", "Padel", "Baloncesto" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c64" }, "idCliente" : 281, "fechaAlta" : { "$date" : 1394130641291 }, "preferencias" : [ "Aquagym", "Aquagym", "Aquagym" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c65" }, "idCliente" : 282, "fechaAlta" : { "$date" : 1394130641291 }, "preferencias" : [ "Aquagym", "Elíptica", "Aquagym", "Natación" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c66" }, "idCliente" : 283, "fechaAlta" : { "$date" : 1394130641291 }, "preferencias" : [ "Carrera en cinta", "Aquagym", "Padel", "Aquagym" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c67" }, "idCliente" : 284, "fechaAlta" : { "$date" : 1394130641291 }, "preferencias" : [ "Musculación" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c68" }, "idCliente" : 285, "fechaAlta" : { "$date" : 1394130641291 }, "preferencias" : [ "Aquagym", "Baloncesto", "Spinning", "Natación", "Elíptica" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c69" }, "idCliente" : 286, "fechaAlta" : { "$date" : 1394130641291 }, "preferencias" : [ "Carrera en cinta", "Baloncesto", "Padel" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c6a" }, "idCliente" : 287, "fechaAlta" : { "$date" : 1394130641291 }, "preferencias" : [ "Tenis", "Aerobic", "Musculación" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c6b" }, "idCliente" : 288, "fechaAlta" : { "$date" : 1394130641291 }, "preferencias" : [ "Tenis" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c6c" }, "idCliente" : 289, "fechaAlta" : { "$date" : 1394130641291 }, "preferencias" : [ "Carrera en cinta", "Natación", "Carrera en cinta", "Aerobic" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c6d" }, "idCliente" : 290, "fechaAlta" : { "$date" : 1394130641291 }, "preferencias" : [ "Padel", "Spinning" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c6e" }, "idCliente" : 291, "fechaAlta" : { "$date" : 1394130641291 }, "preferencias" : [ "Spinning" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c6f" }, "idCliente" : 292, "fechaAlta" : { "$date" : 1394130641291 }, "preferencias" : [ "Baloncesto", "Tenis", "Spinning", "Aerobic", "Baloncesto" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c70" }, "idCliente" : 293, "fechaAlta" : { "$date" : 1394130641291 }, "preferencias" : [ "Baloncesto", "Spinning", "Padel", "Baloncesto", "Musculación" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c71" }, "idCliente" : 294, "fechaAlta" : { "$date" : 1394130641292 }, "preferencias" : [ "Padel", "Baloncesto", "Musculación", "Musculación" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c72" }, "idCliente" : 295, "fechaAlta" : { "$date" : 1394130641292 }, "preferencias" : [ "Aerobic", "Aquagym" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c73" }, "idCliente" : 296, "fechaAlta" : { "$date" : 1394130641292 }, "preferencias" : [ "Carrera en cinta" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c74" }, "idCliente" : 297, "fechaAlta" : { "$date" : 1394130641292 }, "preferencias" : [ "Aerobic", "Aerobic", "Aerobic", "Baloncesto" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c75" }, "idCliente" : 298, "fechaAlta" : { "$date" : 1394130641292 }, "preferencias" : [ "Tenis" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c76" }, "idCliente" : 299, "fechaAlta" : { "$date" : 1394130641292 }, "preferencias" : [ "Natación", "Baloncesto" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c77" }, "idCliente" : 300, "fechaAlta" : { "$date" : 1394130641292 }, "preferencias" : [ "Elíptica", "Natación", "Musculación", "Elíptica", "Spinning" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c78" }, "idCliente" : 301, "fechaAlta" : { "$date" : 1394130641292 }, "preferencias" : [ "Natación" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c79" }, "idCliente" : 302, "fechaAlta" : { "$date" : 1394130641292 }, "preferencias" : [ "Musculación", "Spinning", "Tenis", "Aerobic", "Natación" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c7a" }, "idCliente" : 303, "fechaAlta" : { "$date" : 1394130641292 }, "preferencias" : [ "Aerobic", "Carrera en cinta", "Aquagym" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c7b" }, "idCliente" : 304, "fechaAlta" : { "$date" : 1394130641292 }, "preferencias" : [ "Elíptica" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c7c" }, "idCliente" : 305, "fechaAlta" : { "$date" : 1394130641292 }, "preferencias" : [ "Spinning", "Tenis", "Carrera en cinta" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c7d" }, "idCliente" : 306, "fechaAlta" : { "$date" : 1394130641292 }, "preferencias" : [ "Padel", "Aerobic", "Natación", "Natación", "Spinning" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c7e" }, "idCliente" : 307, "fechaAlta" : { "$date" : 1394130641292 }, "preferencias" : [ "Musculación", "Baloncesto", "Musculación", "Spinning" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c7f" }, "idCliente" : 308, "fechaAlta" : { "$date" : 1394130641292 }, "preferencias" : [ "Natación", "Natación" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c80" }, "idCliente" : 309, "fechaAlta" : { "$date" : 1394130641292 }, "preferencias" : [ "Baloncesto", "Carrera en cinta", "Musculación", "Tenis" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c81" }, "idCliente" : 310, "fechaAlta" : { "$date" : 1394130641292 }, "preferencias" : [ "Carrera en cinta", "Baloncesto" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c82" }, "idCliente" : 311, "fechaAlta" : { "$date" : 1394130641292 }, "preferencias" : [ "Aerobic", "Baloncesto", "Elíptica", "Musculación", "Spinning" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c83" }, "idCliente" : 312, "fechaAlta" : { "$date" : 1394130641292 }, "preferencias" : [ "Baloncesto", "Baloncesto", "Carrera en cinta" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c84" }, "idCliente" : 313, "fechaAlta" : { "$date" : 1394130641292 }, "preferencias" : [ "Natación", "Carrera en cinta", "Aerobic", "Elíptica" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c85" }, "idCliente" : 314, "fechaAlta" : { "$date" : 1394130641292 }, "preferencias" : [ "Natación", "Aquagym", "Aquagym" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c86" }, "idCliente" : 315, "fechaAlta" : { "$date" : 1394130641292 }, "preferencias" : [ "Spinning", "Aerobic" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c87" }, "idCliente" : 316, "fechaAlta" : { "$date" : 1394130641292 }, "preferencias" : [ "Aerobic", "Natación", "Spinning" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c88" }, "idCliente" : 317, "fechaAlta" : { "$date" : 1394130641292 }, "preferencias" : [ "Padel" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c89" }, "idCliente" : 318, "fechaAlta" : { "$date" : 1394130641292 }, "preferencias" : [ "Spinning", "Spinning" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c8a" }, "idCliente" : 319, "fechaAlta" : { "$date" : 1394130641292 }, "preferencias" : [ "Spinning", "Tenis" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c8b" }, "idCliente" : 320, "fechaAlta" : { "$date" : 1394130641293 }, "preferencias" : [ "Padel" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c8c" }, "idCliente" : 321, "fechaAlta" : { "$date" : 1394130641293 }, "preferencias" : [ "Carrera en cinta" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c8d" }, "idCliente" : 322, "fechaAlta" : { "$date" : 1394130641293 }, "preferencias" : [ "Spinning", "Natación" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c8e" }, "idCliente" : 323, "fechaAlta" : { "$date" : 1394130641293 }, "preferencias" : [ "Aquagym", "Aquagym", "Baloncesto", "Baloncesto", "Tenis" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c8f" }, "idCliente" : 324, "fechaAlta" : { "$date" : 1394130641293 }, "preferencias" : [ "Aerobic", "Elíptica", "Elíptica" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c90" }, "idCliente" : 325, "fechaAlta" : { "$date" : 1394130641293 }, "preferencias" : [ "Padel", "Baloncesto", "Baloncesto", "Spinning" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c91" }, "idCliente" : 326, "fechaAlta" : { "$date" : 1394130641293 }, "preferencias" : [ "Musculación" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c92" }, "idCliente" : 327, "fechaAlta" : { "$date" : 1394130641293 }, "preferencias" : [ "Aquagym", "Musculación", "Aerobic", "Aquagym" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c93" }, "idCliente" : 328, "fechaAlta" : { "$date" : 1394130641293 }, "preferencias" : [ "Musculación", "Elíptica", "Tenis", "Aquagym" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c94" }, "idCliente" : 329, "fechaAlta" : { "$date" : 1394130641293 }, "preferencias" : [ "Aquagym", "Padel", "Elíptica", "Tenis", "Aquagym" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c95" }, "idCliente" : 330, "fechaAlta" : { "$date" : 1394130641293 }, "preferencias" : [ "Aerobic" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c96" }, "idCliente" : 331, "fechaAlta" : { "$date" : 1394130641293 }, "preferencias" : [ "Carrera en cinta", "Carrera en cinta", "Padel" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c97" }, "idCliente" : 332, "fechaAlta" : { "$date" : 1394130641293 }, "preferencias" : [ "Tenis", "Aerobic", "Musculación" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c98" }, "idCliente" : 333, "fechaAlta" : { "$date" : 1394130641293 }, "preferencias" : [ "Carrera en cinta", "Aquagym", "Tenis", "Tenis", "Elíptica" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c99" }, "idCliente" : 334, "fechaAlta" : { "$date" : 1394130641293 }, "preferencias" : [ "Padel", "Carrera en cinta", "Spinning" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c9a" }, "idCliente" : 335, "fechaAlta" : { "$date" : 1394130641293 }, "preferencias" : [ "Musculación", "Natación", "Tenis" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c9b" }, "idCliente" : 336, "fechaAlta" : { "$date" : 1394130641293 }, "preferencias" : [ "Carrera en cinta", "Tenis", "Padel" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c9c" }, "idCliente" : 337, "fechaAlta" : { "$date" : 1394130641293 }, "preferencias" : [ "Spinning", "Spinning" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c9d" }, "idCliente" : 338, "fechaAlta" : { "$date" : 1394130641293 }, "preferencias" : [ "Baloncesto", "Elíptica", "Carrera en cinta" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c9e" }, "idCliente" : 339, "fechaAlta" : { "$date" : 1394130641293 }, "preferencias" : [ "Baloncesto", "Carrera en cinta", "Musculación" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629c9f" }, "idCliente" : 340, "fechaAlta" : { "$date" : 1394130641293 }, "preferencias" : [ "Spinning", "Padel", "Musculación", "Elíptica" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629ca0" }, "idCliente" : 341, "fechaAlta" : { "$date" : 1394130641293 }, "preferencias" : [ "Aerobic", "Elíptica", "Aquagym", "Aerobic" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629ca1" }, "idCliente" : 342, "fechaAlta" : { "$date" : 1394130641293 }, "preferencias" : [ "Musculación", "Padel", "Elíptica", "Aquagym" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629ca2" }, "idCliente" : 343, "fechaAlta" : { "$date" : 1394130641293 }, "preferencias" : [ "Tenis", "Musculación" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629ca3" }, "idCliente" : 344, "fechaAlta" : { "$date" : 1394130641293 }, "preferencias" : [ "Aerobic", "Aerobic", "Natación" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629ca4" }, "idCliente" : 345, "fechaAlta" : { "$date" : 1394130641293 }, "preferencias" : [ "Elíptica", "Elíptica", "Spinning", "Padel" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629ca5" }, "idCliente" : 346, "fechaAlta" : { "$date" : 1394130641293 }, "preferencias" : [ "Tenis", "Carrera en cinta", "Aerobic", "Aerobic", "Padel" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629ca6" }, "idCliente" : 347, "fechaAlta" : { "$date" : 1394130641293 }, "preferencias" : [ "Padel", "Spinning", "Aquagym", "Elíptica" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629ca7" }, "idCliente" : 348, "fechaAlta" : { "$date" : 1394130641294 }, "preferencias" : [ "Musculación", "Spinning" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629ca8" }, "idCliente" : 349, "fechaAlta" : { "$date" : 1394130641294 }, "preferencias" : [ "Padel", "Aerobic", "Baloncesto", "Aquagym" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629ca9" }, "idCliente" : 350, "fechaAlta" : { "$date" : 1394130641294 }, "preferencias" : [ "Padel", "Spinning", "Spinning" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629caa" }, "idCliente" : 351, "fechaAlta" : { "$date" : 1394130641294 }, "preferencias" : [ "Elíptica", "Aquagym", "Elíptica", "Aerobic", "Aerobic" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629cab" }, "idCliente" : 352, "fechaAlta" : { "$date" : 1394130641294 }, "preferencias" : [ "Tenis", "Musculación", "Tenis" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629cac" }, "idCliente" : 353, "fechaAlta" : { "$date" : 1394130641294 }, "preferencias" : [ "Elíptica" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629cad" }, "idCliente" : 354, "fechaAlta" : { "$date" : 1394130641294 }, "preferencias" : [ "Elíptica", "Aquagym", "Baloncesto" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629cae" }, "idCliente" : 355, "fechaAlta" : { "$date" : 1394130641294 }, "preferencias" : [ "Aerobic", "Spinning", "Baloncesto" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629caf" }, "idCliente" : 356, "fechaAlta" : { "$date" : 1394130641294 }, "preferencias" : [ "Padel", "Aquagym" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629cb0" }, "idCliente" : 357, "fechaAlta" : { "$date" : 1394130641294 }, "preferencias" : [ "Padel" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629cb1" }, "idCliente" : 358, "fechaAlta" : { "$date" : 1394130641294 }, "preferencias" : [ "Baloncesto", "Carrera en cinta", "Natación" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629cb2" }, "idCliente" : 359, "fechaAlta" : { "$date" : 1394130641294 }, "preferencias" : [ "Tenis", "Baloncesto" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629cb3" }, "idCliente" : 360, "fechaAlta" : { "$date" : 1394130641294 }, "preferencias" : [ "Elíptica", "Musculación", "Padel", "Natación", "Aquagym" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629cb4" }, "idCliente" : 361, "fechaAlta" : { "$date" : 1394130641294 }, "preferencias" : [ "Aerobic", "Tenis", "Spinning", "Carrera en cinta", "Aerobic" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629cb5" }, "idCliente" : 362, "fechaAlta" : { "$date" : 1394130641294 }, "preferencias" : [ "Elíptica" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629cb6" }, "idCliente" : 363, "fechaAlta" : { "$date" : 1394130641294 }, "preferencias" : [ "Tenis", "Musculación", "Aerobic" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629cb7" }, "idCliente" : 364, "fechaAlta" : { "$date" : 1394130641294 }, "preferencias" : [ "Baloncesto" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629cb8" }, "idCliente" : 365, "fechaAlta" : { "$date" : 1394130641294 }, "preferencias" : [ "Carrera en cinta", "Tenis", "Carrera en cinta" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629cb9" }, "idCliente" : 366, "fechaAlta" : { "$date" : 1394130641294 }, "preferencias" : [ "Aquagym", "Spinning" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629cba" }, "idCliente" : 367, "fechaAlta" : { "$date" : 1394130641294 }, "preferencias" : [ "Aquagym", "Elíptica" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629cbb" }, "idCliente" : 368, "fechaAlta" : { "$date" : 1394130641294 }, "preferencias" : [ "Musculación", "Spinning", "Aerobic", "Aerobic", "Tenis" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629cbc" }, "idCliente" : 369, "fechaAlta" : { "$date" : 1394130641294 }, "preferencias" : [ "Padel", "Baloncesto", "Elíptica" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629cbd" }, "idCliente" : 370, "fechaAlta" : { "$date" : 1394130641294 }, "preferencias" : [ "Aquagym", "Padel", "Elíptica", "Musculación", "Musculación" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629cbe" }, "idCliente" : 371, "fechaAlta" : { "$date" : 1394130641294 }, "preferencias" : [ "Aerobic", "Aerobic", "Elíptica" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629cbf" }, "idCliente" : 372, "fechaAlta" : { "$date" : 1394130641294 }, "preferencias" : [ "Aquagym", "Spinning" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629cc0" }, "idCliente" : 373, "fechaAlta" : { "$date" : 1394130641295 }, "preferencias" : [ "Natación", "Elíptica" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629cc1" }, "idCliente" : 374, "fechaAlta" : { "$date" : 1394130641295 }, "preferencias" : [ "Elíptica" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629cc2" }, "idCliente" : 375, "fechaAlta" : { "$date" : 1394130641295 }, "preferencias" : [ "Musculación", "Natación" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629cc3" }, "idCliente" : 376, "fechaAlta" : { "$date" : 1394130641295 }, "preferencias" : [ "Musculación", "Carrera en cinta", "Natación", "Musculación" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629cc4" }, "idCliente" : 377, "fechaAlta" : { "$date" : 1394130641295 }, "preferencias" : [ "Aquagym" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629cc5" }, "idCliente" : 378, "fechaAlta" : { "$date" : 1394130641295 }, "preferencias" : [ "Aerobic", "Aquagym" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629cc6" }, "idCliente" : 379, "fechaAlta" : { "$date" : 1394130641295 }, "preferencias" : [ "Elíptica" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629cc7" }, "idCliente" : 380, "fechaAlta" : { "$date" : 1394130641295 }, "preferencias" : [ "Aquagym", "Aquagym", "Spinning" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629cc8" }, "idCliente" : 381, "fechaAlta" : { "$date" : 1394130641295 }, "preferencias" : [ "Natación", "Baloncesto", "Spinning", "Padel", "Tenis" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629cc9" }, "idCliente" : 382, "fechaAlta" : { "$date" : 1394130641295 }, "preferencias" : [ "Natación", "Elíptica", "Elíptica", "Padel", "Aerobic" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629cca" }, "idCliente" : 383, "fechaAlta" : { "$date" : 1394130641295 }, "preferencias" : [ "Padel", "Elíptica", "Elíptica", "Musculación" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629ccb" }, "idCliente" : 384, "fechaAlta" : { "$date" : 1394130641295 }, "preferencias" : [ "Baloncesto", "Aerobic" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629ccc" }, "idCliente" : 385, "fechaAlta" : { "$date" : 1394130641295 }, "preferencias" : [ "Baloncesto", "Carrera en cinta", "Tenis", "Carrera en cinta", "Musculación" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629ccd" }, "idCliente" : 386, "fechaAlta" : { "$date" : 1394130641295 }, "preferencias" : [ "Elíptica" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629cce" }, "idCliente" : 387, "fechaAlta" : { "$date" : 1394130641295 }, "preferencias" : [ "Tenis", "Aquagym", "Padel" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629ccf" }, "idCliente" : 388, "fechaAlta" : { "$date" : 1394130641295 }, "preferencias" : [ "Baloncesto", "Baloncesto", "Musculación", "Tenis" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629cd0" }, "idCliente" : 389, "fechaAlta" : { "$date" : 1394130641295 }, "preferencias" : [ "Carrera en cinta", "Tenis", "Carrera en cinta" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629cd1" }, "idCliente" : 390, "fechaAlta" : { "$date" : 1394130641295 }, "preferencias" : [ "Musculación", "Spinning", "Aerobic" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629cd2" }, "idCliente" : 391, "fechaAlta" : { "$date" : 1394130641295 }, "preferencias" : [ "Carrera en cinta", "Carrera en cinta", "Baloncesto" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629cd3" }, "idCliente" : 392, "fechaAlta" : { "$date" : 1394130641295 }, "preferencias" : [ "Tenis" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629cd4" }, "idCliente" : 393, "fechaAlta" : { "$date" : 1394130641295 }, "preferencias" : [ "Elíptica" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629cd5" }, "idCliente" : 394, "fechaAlta" : { "$date" : 1394130641295 }, "preferencias" : [ "Aquagym", "Elíptica", "Natación", "Baloncesto", "Spinning" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629cd6" }, "idCliente" : 395, "fechaAlta" : { "$date" : 1394130641295 }, "preferencias" : [ "Musculación", "Baloncesto", "Padel" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629cd7" }, "idCliente" : 396, "fechaAlta" : { "$date" : 1394130641295 }, "preferencias" : [ "Spinning", "Carrera en cinta", "Elíptica", "Natación" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629cd8" }, "idCliente" : 397, "fechaAlta" : { "$date" : 1394130641295 }, "preferencias" : [ "Baloncesto", "Carrera en cinta", "Aerobic", "Natación" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629cd9" }, "idCliente" : 398, "fechaAlta" : { "$date" : 1394130641295 }, "preferencias" : [ "Natación", "Spinning" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629cda" }, "idCliente" : 399, "fechaAlta" : { "$date" : 1394130641295 }, "preferencias" : [ "Musculación" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629cdb" }, "idCliente" : 400, "fechaAlta" : { "$date" : 1394130641295 }, "preferencias" : [ "Spinning", "Padel", "Elíptica" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629cdc" }, "idCliente" : 401, "fechaAlta" : { "$date" : 1394130641296 }, "preferencias" : [ "Aerobic", "Aquagym" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629cdd" }, "idCliente" : 402, "fechaAlta" : { "$date" : 1394130641296 }, "preferencias" : [ "Baloncesto", "Aerobic", "Aquagym" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629cde" }, "idCliente" : 403, "fechaAlta" : { "$date" : 1394130641296 }, "preferencias" : [ "Aquagym", "Tenis", "Aquagym" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629cdf" }, "idCliente" : 404, "fechaAlta" : { "$date" : 1394130641296 }, "preferencias" : [ "Padel", "Aquagym", "Spinning", "Carrera en cinta", "Musculación" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629ce0" }, "idCliente" : 405, "fechaAlta" : { "$date" : 1394130641296 }, "preferencias" : [ "Musculación" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629ce1" }, "idCliente" : 406, "fechaAlta" : { "$date" : 1394130641296 }, "preferencias" : [ "Natación" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629ce2" }, "idCliente" : 407, "fechaAlta" : { "$date" : 1394130641296 }, "preferencias" : [ "Aquagym", "Natación", "Baloncesto", "Aquagym", "Carrera en cinta" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629ce3" }, "idCliente" : 408, "fechaAlta" : { "$date" : 1394130641296 }, "preferencias" : [ "Padel", "Padel" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629ce4" }, "idCliente" : 409, "fechaAlta" : { "$date" : 1394130641296 }, "preferencias" : [ "Aerobic", "Padel" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629ce5" }, "idCliente" : 410, "fechaAlta" : { "$date" : 1394130641296 }, "preferencias" : [ "Aerobic", "Elíptica", "Natación", "Spinning", "Padel" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629ce6" }, "idCliente" : 411, "fechaAlta" : { "$date" : 1394130641296 }, "preferencias" : [ "Natación", "Padel" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629ce7" }, "idCliente" : 412, "fechaAlta" : { "$date" : 1394130641296 }, "preferencias" : [ "Elíptica", "Spinning" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629ce8" }, "idCliente" : 413, "fechaAlta" : { "$date" : 1394130641296 }, "preferencias" : [ "Aerobic", "Tenis", "Aerobic" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629ce9" }, "idCliente" : 414, "fechaAlta" : { "$date" : 1394130641296 }, "preferencias" : [ "Aquagym", "Aquagym", "Tenis", "Aquagym" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629cea" }, "idCliente" : 415, "fechaAlta" : { "$date" : 1394130641296 }, "preferencias" : [ "Tenis", "Aquagym" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629ceb" }, "idCliente" : 416, "fechaAlta" : { "$date" : 1394130641296 }, "preferencias" : [ "Tenis", "Spinning", "Baloncesto", "Aerobic" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629cec" }, "idCliente" : 417, "fechaAlta" : { "$date" : 1394130641296 }, "preferencias" : [ "Aquagym", "Tenis", "Elíptica", "Tenis", "Musculación" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629ced" }, "idCliente" : 418, "fechaAlta" : { "$date" : 1394130641296 }, "preferencias" : [ "Baloncesto", "Musculación" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629cee" }, "idCliente" : 419, "fechaAlta" : { "$date" : 1394130641296 }, "preferencias" : [ "Baloncesto" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629cef" }, "idCliente" : 420, "fechaAlta" : { "$date" : 1394130641296 }, "preferencias" : [ "Spinning", "Elíptica", "Musculación" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629cf0" }, "idCliente" : 421, "fechaAlta" : { "$date" : 1394130641296 }, "preferencias" : [ "Elíptica", "Carrera en cinta", "Padel", "Elíptica", "Baloncesto" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629cf1" }, "idCliente" : 422, "fechaAlta" : { "$date" : 1394130641296 }, "preferencias" : [ "Padel", "Aquagym", "Baloncesto", "Tenis" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629cf2" }, "idCliente" : 423, "fechaAlta" : { "$date" : 1394130641296 }, "preferencias" : [ "Tenis", "Aerobic" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629cf3" }, "idCliente" : 424, "fechaAlta" : { "$date" : 1394130641296 }, "preferencias" : [ "Natación" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629cf4" }, "idCliente" : 425, "fechaAlta" : { "$date" : 1394130641296 }, "preferencias" : [ "Baloncesto", "Baloncesto", "Natación", "Padel", "Tenis" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629cf5" }, "idCliente" : 426, "fechaAlta" : { "$date" : 1394130641296 }, "preferencias" : [ "Carrera en cinta", "Spinning", "Musculación" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629cf6" }, "idCliente" : 427, "fechaAlta" : { "$date" : 1394130641296 }, "preferencias" : [ "Spinning", "Spinning", "Elíptica", "Elíptica", "Baloncesto" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629cf7" }, "idCliente" : 428, "fechaAlta" : { "$date" : 1394130641296 }, "preferencias" : [ "Natación", "Natación", "Natación", "Baloncesto" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629cf8" }, "idCliente" : 429, "fechaAlta" : { "$date" : 1394130641296 }, "preferencias" : [ "Tenis", "Carrera en cinta", "Elíptica", "Aquagym" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629cf9" }, "idCliente" : 430, "fechaAlta" : { "$date" : 1394130641297 }, "preferencias" : [ "Natación" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629cfa" }, "idCliente" : 431, "fechaAlta" : { "$date" : 1394130641297 }, "preferencias" : [ "Padel" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629cfb" }, "idCliente" : 432, "fechaAlta" : { "$date" : 1394130641297 }, "preferencias" : [ "Aerobic", "Elíptica", "Elíptica", "Aquagym", "Padel" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629cfc" }, "idCliente" : 433, "fechaAlta" : { "$date" : 1394130641297 }, "preferencias" : [ "Musculación", "Aquagym", "Tenis", "Aquagym", "Carrera en cinta" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629cfd" }, "idCliente" : 434, "fechaAlta" : { "$date" : 1394130641297 }, "preferencias" : [ "Carrera en cinta", "Carrera en cinta", "Baloncesto" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629cfe" }, "idCliente" : 435, "fechaAlta" : { "$date" : 1394130641297 }, "preferencias" : [ "Musculación", "Padel", "Padel" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629cff" }, "idCliente" : 436, "fechaAlta" : { "$date" : 1394130641297 }, "preferencias" : [ "Baloncesto" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629d00" }, "idCliente" : 437, "fechaAlta" : { "$date" : 1394130641297 }, "preferencias" : [ "Carrera en cinta", "Spinning", "Aerobic", "Carrera en cinta", "Natación" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629d01" }, "idCliente" : 438, "fechaAlta" : { "$date" : 1394130641297 }, "preferencias" : [ "Baloncesto", "Padel", "Padel" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629d02" }, "idCliente" : 439, "fechaAlta" : { "$date" : 1394130641297 }, "preferencias" : [ "Padel", "Musculación" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629d03" }, "idCliente" : 440, "fechaAlta" : { "$date" : 1394130641297 }, "preferencias" : [ "Tenis" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629d04" }, "idCliente" : 441, "fechaAlta" : { "$date" : 1394130641297 }, "preferencias" : [ "Natación", "Natación" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629d05" }, "idCliente" : 442, "fechaAlta" : { "$date" : 1394130641297 }, "preferencias" : [ "Tenis", "Aquagym", "Elíptica", "Baloncesto" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629d06" }, "idCliente" : 443, "fechaAlta" : { "$date" : 1394130641297 }, "preferencias" : [ "Musculación" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629d07" }, "idCliente" : 444, "fechaAlta" : { "$date" : 1394130641297 }, "preferencias" : [ "Aerobic", "Aerobic", "Aerobic", "Padel" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629d08" }, "idCliente" : 445, "fechaAlta" : { "$date" : 1394130641297 }, "preferencias" : [ "Spinning", "Spinning" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629d09" }, "idCliente" : 446, "fechaAlta" : { "$date" : 1394130641297 }, "preferencias" : [ "Tenis", "Aerobic", "Aerobic", "Padel" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629d0a" }, "idCliente" : 447, "fechaAlta" : { "$date" : 1394130641297 }, "preferencias" : [ "Baloncesto" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629d0b" }, "idCliente" : 448, "fechaAlta" : { "$date" : 1394130641297 }, "preferencias" : [ "Baloncesto", "Carrera en cinta", "Baloncesto" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629d0c" }, "idCliente" : 449, "fechaAlta" : { "$date" : 1394130641297 }, "preferencias" : [ "Padel", "Elíptica", "Padel" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629d0d" }, "idCliente" : 450, "fechaAlta" : { "$date" : 1394130641297 }, "preferencias" : [ "Aquagym", "Baloncesto", "Spinning", "Elíptica", "Elíptica" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629d0e" }, "idCliente" : 451, "fechaAlta" : { "$date" : 1394130641297 }, "preferencias" : [ "Natación", "Aquagym" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629d0f" }, "idCliente" : 452, "fechaAlta" : { "$date" : 1394130641297 }, "preferencias" : [ "Natación", "Carrera en cinta" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629d10" }, "idCliente" : 453, "fechaAlta" : { "$date" : 1394130641297 }, "preferencias" : [ "Musculación" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629d11" }, "idCliente" : 454, "fechaAlta" : { "$date" : 1394130641297 }, "preferencias" : [ "Padel", "Musculación", "Elíptica", "Aerobic" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629d12" }, "idCliente" : 455, "fechaAlta" : { "$date" : 1394130641297 }, "preferencias" : [ "Spinning", "Baloncesto", "Elíptica", "Aquagym", "Padel" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629d13" }, "idCliente" : 456, "fechaAlta" : { "$date" : 1394130641297 }, "preferencias" : [ "Musculación", "Spinning", "Aerobic", "Aerobic" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629d14" }, "idCliente" : 457, "fechaAlta" : { "$date" : 1394130641297 }, "preferencias" : [ "Musculación", "Elíptica", "Spinning", "Carrera en cinta" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629d15" }, "idCliente" : 458, "fechaAlta" : { "$date" : 1394130641297 }, "preferencias" : [ "Natación", "Aquagym", "Padel", "Spinning", "Musculación" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629d16" }, "idCliente" : 459, "fechaAlta" : { "$date" : 1394130641298 }, "preferencias" : [ "Aquagym", "Padel", "Aquagym", "Baloncesto" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629d17" }, "idCliente" : 460, "fechaAlta" : { "$date" : 1394130641298 }, "preferencias" : [ "Elíptica", "Aquagym", "Baloncesto" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629d18" }, "idCliente" : 461, "fechaAlta" : { "$date" : 1394130641298 }, "preferencias" : [ "Spinning", "Elíptica" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629d19" }, "idCliente" : 462, "fechaAlta" : { "$date" : 1394130641298 }, "preferencias" : [ "Tenis", "Aquagym" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629d1a" }, "idCliente" : 463, "fechaAlta" : { "$date" : 1394130641298 }, "preferencias" : [ "Baloncesto" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629d1b" }, "idCliente" : 464, "fechaAlta" : { "$date" : 1394130641298 }, "preferencias" : [ "Carrera en cinta", "Elíptica" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629d1c" }, "idCliente" : 465, "fechaAlta" : { "$date" : 1394130641298 }, "preferencias" : [ "Carrera en cinta", "Musculación", "Aquagym" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629d1d" }, "idCliente" : 466, "fechaAlta" : { "$date" : 1394130641298 }, "preferencias" : [ "Natación", "Aquagym", "Carrera en cinta", "Carrera en cinta", "Aerobic" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629d1e" }, "idCliente" : 467, "fechaAlta" : { "$date" : 1394130641298 }, "preferencias" : [ "Tenis", "Baloncesto", "Aerobic", "Aerobic" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629d1f" }, "idCliente" : 468, "fechaAlta" : { "$date" : 1394130641298 }, "preferencias" : [ "Elíptica", "Musculación" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629d20" }, "idCliente" : 469, "fechaAlta" : { "$date" : 1394130641298 }, "preferencias" : [ "Padel", "Baloncesto", "Natación", "Tenis" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629d21" }, "idCliente" : 470, "fechaAlta" : { "$date" : 1394130641298 }, "preferencias" : [ "Baloncesto", "Spinning", "Padel" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629d22" }, "idCliente" : 471, "fechaAlta" : { "$date" : 1394130641298 }, "preferencias" : [ "Aquagym" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629d23" }, "idCliente" : 472, "fechaAlta" : { "$date" : 1394130641298 }, "preferencias" : [ "Natación", "Elíptica", "Padel", "Aerobic" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629d24" }, "idCliente" : 473, "fechaAlta" : { "$date" : 1394130641298 }, "preferencias" : [ "Aquagym" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629d25" }, "idCliente" : 474, "fechaAlta" : { "$date" : 1394130641298 }, "preferencias" : [ "Carrera en cinta", "Spinning", "Carrera en cinta" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629d26" }, "idCliente" : 475, "fechaAlta" : { "$date" : 1394130641298 }, "preferencias" : [ "Elíptica", "Elíptica", "Aerobic", "Tenis" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629d27" }, "idCliente" : 476, "fechaAlta" : { "$date" : 1394130641298 }, "preferencias" : [ "Aerobic", "Padel", "Elíptica" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629d28" }, "idCliente" : 477, "fechaAlta" : { "$date" : 1394130641298 }, "preferencias" : [ "Elíptica", "Elíptica" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629d29" }, "idCliente" : 478, "fechaAlta" : { "$date" : 1394130641298 }, "preferencias" : [ "Tenis", "Musculación", "Aquagym", "Aerobic", "Tenis" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629d2a" }, "idCliente" : 479, "fechaAlta" : { "$date" : 1394130641298 }, "preferencias" : [ "Musculación", "Spinning", "Musculación", "Musculación" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629d2b" }, "idCliente" : 480, "fechaAlta" : { "$date" : 1394130641298 }, "preferencias" : [ "Spinning", "Baloncesto", "Musculación" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629d2c" }, "idCliente" : 481, "fechaAlta" : { "$date" : 1394130641298 }, "preferencias" : [ "Baloncesto" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629d2d" }, "idCliente" : 482, "fechaAlta" : { "$date" : 1394130641298 }, "preferencias" : [ "Carrera en cinta" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629d2e" }, "idCliente" : 483, "fechaAlta" : { "$date" : 1394130641298 }, "preferencias" : [ "Elíptica", "Carrera en cinta", "Elíptica" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629d2f" }, "idCliente" : 484, "fechaAlta" : { "$date" : 1394130641298 }, "preferencias" : [ "Spinning", "Aquagym", "Musculación", "Natación" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629d30" }, "idCliente" : 485, "fechaAlta" : { "$date" : 1394130641298 }, "preferencias" : [ "Elíptica", "Carrera en cinta", "Baloncesto" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629d31" }, "idCliente" : 486, "fechaAlta" : { "$date" : 1394130641298 }, "preferencias" : [ "Natación", "Musculación", "Padel", "Carrera en cinta", "Elíptica" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629d32" }, "idCliente" : 487, "fechaAlta" : { "$date" : 1394130641298 }, "preferencias" : [ "Aquagym" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629d33" }, "idCliente" : 488, "fechaAlta" : { "$date" : 1394130641299 }, "preferencias" : [ "Elíptica" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629d34" }, "idCliente" : 489, "fechaAlta" : { "$date" : 1394130641299 }, "preferencias" : [ "Aerobic" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629d35" }, "idCliente" : 490, "fechaAlta" : { "$date" : 1394130641299 }, "preferencias" : [ "Aquagym", "Musculación", "Spinning", "Tenis", "Aquagym" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629d36" }, "idCliente" : 491, "fechaAlta" : { "$date" : 1394130641299 }, "preferencias" : [ "Natación", "Spinning" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629d37" }, "idCliente" : 492, "fechaAlta" : { "$date" : 1394130641299 }, "preferencias" : [ "Carrera en cinta", "Elíptica", "Musculación", "Elíptica", "Aerobic" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629d38" }, "idCliente" : 493, "fechaAlta" : { "$date" : 1394130641299 }, "preferencias" : [ "Natación", "Spinning", "Musculación", "Natación" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629d39" }, "idCliente" : 494, "fechaAlta" : { "$date" : 1394130641299 }, "preferencias" : [ "Padel", "Carrera en cinta", "Natación", "Musculación", "Aerobic" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629d3a" }, "idCliente" : 495, "fechaAlta" : { "$date" : 1394130641299 }, "preferencias" : [ "Aerobic", "Aerobic" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629d3b" }, "idCliente" : 496, "fechaAlta" : { "$date" : 1394130641299 }, "preferencias" : [ "Carrera en cinta", "Padel", "Padel", "Baloncesto", "Carrera en cinta" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629d3c" }, "idCliente" : 497, "fechaAlta" : { "$date" : 1394130641299 }, "preferencias" : [ "Elíptica", "Musculación", "Elíptica", "Baloncesto" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629d3d" }, "idCliente" : 498, "fechaAlta" : { "$date" : 1394130641299 }, "preferencias" : [ "Aerobic", "Elíptica", "Baloncesto", "Carrera en cinta", "Musculación" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629d3e" }, "idCliente" : 499, "fechaAlta" : { "$date" : 1394130641299 }, "preferencias" : [ "Natación", "Spinning", "Padel", "Aquagym" ] }
+{ "_id" : { "$oid" : "5318bed1d2550240c5629d3f" }, "idCliente" : 500, "fechaAlta" : { "$date" : 1394130641299 }, "preferencias" : [ "Spinning" ] }

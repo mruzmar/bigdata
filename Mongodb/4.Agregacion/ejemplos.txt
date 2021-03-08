@@ -1,0 +1,325 @@
+Ejemplos Agregación
+======================================
+
+5.1 SINTAXIS
+================================================================
+
+1. Cargar fichero zips.json
+mongoimport --host localhost:27017 -d curso -c zips --type json --file "\ejemplos\4.Agregacion\zips.json"
+
+2.Ejecutar 
+
+<!-- En la agregacion para los campos tenemos que poner $ para referirnos a él -->
+db.zips.aggregate ( [ {  <!-- Le pasamos un elemento al array por cada etapa  -->
+	$group : {  <!-- Etapa de agrupacion -->
+		_id : "$state" ,  <!-- campo por el que agrupo-->
+		poblacionTotal : {$sum : "$pop"}  <!-- Sumo el campo pop -->
+	}
+} ]	)
+
+<!-- Devuelve un cursor con el agregado de todo los estados contando su población -->
+
+
+5.2 SINTAXIS
+===================================================================
+<!-- Añadir mas campos para más características -->
+db.zips.aggregate ( 
+		[ 
+			{  <!-- Le pasamos un elemento al array por cada etapa  -->
+				$group : {  <!-- Etapa de agrupacion -->
+					_id : "$state" ,  <!-- campo por el que agrupo-->
+					poblacionTotal : {$sum : "$pop"}  <!-- Sumo el campo pop -->
+				}
+			} 
+		],{ 
+			explain : true, <!-- Nos de información de la operacion -->
+			allowDiskUse : true, <!-- Permite utilizar espacion en disco, si no tiene suficiente con la memoria -->
+			cursor : {batchSize : 5} <!-- Especificamos tamaño del primer lote -->
+		}
+)
+
+5.3 $AVG
+===================================================================
+db.zips.aggregate ( [ {  <!-- Le pasamos un array por cada etapa  -->
+	$group : {  <!-- Etapa de agrupacion -->
+		_id : "$state" ,  
+		poblacionMedia : {$avg : "$pop"}  
+	}
+} ]	)
+
+<!-- Estoy calculando la media de la población de los códigos postales, no de las ciudades, 
+ya que la poblacion esta asociada al codigopostal -->
+
+<!-- 2 etapas, La primera genera un documento que es usado en la segunda etapa  --> 
+db.zips.aggregate ( [ {  
+	$group : {  <!-- Etapa de agrupacion -->
+		_id : { estado : "$state" , ciudad : "$city"} ,  <!-- agrupamos por estado y ciudad -->
+		poblacion : {$sum : "$pop"}  
+	}
+} , {	<!-- Del resultado del primer agrupamiento saco la media, utilizo las variables del primero  -->
+	$group : {
+		_id : "$_id.estado" ,  
+		poblacionTotal : {$avg : "$poblacion"}  
+	}
+} ]	)
+
+
+5.4 $min y $max
+=====================================================================
+<!-- min y max de poblacion por cod postal -->
+db.zips.aggregate ( [ {  
+	$group : {  
+		_id : "$state" ,  
+		poblacionMinima : {$min : "$pop"}  
+	}
+} ]	)
+
+
+db.zips.aggregate ( [ {  
+	$group : {  
+		_id : "$state" ,  
+		poblacionMaxima : {$max : "$pop"}  
+	}
+} ]	)
+
+
+5.5 $push y $addToSet
+=====================================================================
+<!-- min y max de poblacion por cod postal -->
+<!-- obtengo todas las ciudades de un estado -->
+db.zips.aggregate ( [ {  
+	$group : {  
+		_id : "$state" ,  
+		ciudades : {$push : "$city"}  <!-- guardo en el campo ciudades lo que hay en city, puede haber valores repetidos -->
+	}
+} , { $limit : 1 }  ]	)
+
+
+db.zips.aggregate ( [ {  
+	$group : {  
+		_id : "$state" ,  
+		ciudades : {$addToSet : "$city"}  <!-- guardo en el campo ciudades lo que hay en city, NO puede haber valores repetidos -->
+	}
+} , { $limit : 1 }  ]	)
+
+
+
+5.6 Comparacion
+=========================================================================
+db.zips.aggregate ( [ {  
+	$group : {  
+		_id : "$state" ,  
+		poblacionMinima : {$min : "$pop"}  
+	}
+} , { $project : {  <!-- Proyecta los campos que le indicamos -->
+			_id : 1,
+			poblacionMinima : 1,
+			abandonado : { $lt : ["$poblacionMinima", 1] } } 
+		}
+
+]	)
+
+
+
+5.7 Aritméticos
+=================================================================================
+
+<!-- Calculo la poblacion en miles de personas -->
+db.zips.aggregate ( [ {  
+	$group : {  
+		_id : "$state" ,  
+		poblacionTotal : {$sum :  {$divide : [ "$pop",1000 ] } }  
+	}
+} ]	)
+
+<!-- Calculo la poblacion en millones de personas -->
+db.zips.aggregate ( [ {  
+	$group : {  
+		_id : "$state" ,  
+		poblacionTotal : {$sum :  {$divide : [ "$pop", {$multiply : [1000,1000]  } ] } }  
+	}
+} ]	)
+
+
+
+5.8 Texto
+=================================================================================
+db.zips.aggregate ( [ {  
+	$group : {  
+		_id : "$state" ,  
+		ciudades : {$push : { $substr : [ "$city" , 0 , 5 ] } }  
+	}
+} , { $limit : 1 }  ]	)
+
+
+db.zips.aggregate ( [ {  
+	$group : {  
+		_id : "$state" ,  
+		ciudades : {$push : { $toLower : "$city" } }  
+	}
+} , { $limit : 1 }  ]	)
+
+
+
+5.8 Comparación
+=================================================================================
+db.zips.aggregate ( [ {  
+	$group : {  
+		_id : {
+			estado : "$state" ,  
+			ciudad : "$city"  
+		} ,
+		buzonesCiudad : { 
+			$sum : { <!-- sumamos el -->
+				$cond : [ { $gt : ["$pop",1000] },{$divide : ["$pop",1000]}, 1	]
+			} 
+		}
+	
+	}
+} , {
+	$group : {
+		_id : "$_id.estado",
+		mediaBuzonesCiudad : { $avg: "$buzonesCiudad"}
+	
+	}	
+	} ]	)
+
+
+
+5.9 Operadores de etapas  $project
+=================================================================================
+db.zips.aggregate ( [
+	{
+		$project : {  <!-- reducimos cantida de información que se muestra y cambiamos nombre de los campos -->
+			_id : 0,
+			estado : "$state" ,  
+			poblacion : "$pop"  
+		} 
+	} ,  {
+	$group : {
+		_id : "$estado",
+		poblacionTotal : { $sum: "$poblacion"}
+	}	
+	} ]	)
+
+
+db.zips.aggregate ( [
+	{
+		$project : {  <!-- reducimos cantida de información que se muestra y cambiamos nombre de los campos -->
+			_id : 0,
+			ciudadestado : {$concat : ["$city","_","$state"] },  
+			poblacion : "$pop"  
+		} 
+	} ,  {
+	$group : {
+		_id : "$ciudadestado",
+		poblacionTotal : { $sum: "$poblacion"}
+	}	
+	} ]	)
+
+
+
+
+5.10 Operadores de etapas  $match
+=================================================================================
+db.zips.aggregate ( [
+	{$match : {state : "CA"} }, <!-- Filtro para trabajar solo con un estado -->
+	{
+		$group : {
+			_id : "$city",
+			poblacion : { $sum: "$pop"}
+		}	
+	},  
+	{
+		$group : {
+			_id : null, <!-- no agrupo por nada -->
+			poblacionMedia : { $avg: "$poblacion"} <!-- calculo la media de la población de todo lo que llega -->
+		}	
+	} 
+]	)
+
+5.11 Operadores $sort, $skip $limit
+=================================================================================
+db.zips.aggregate ( [
+	{$match : {state : "TX"} }, <!-- Filtro para trabajar solo con un estado -->
+	{
+		$group : {
+			_id : "$city",
+			poblacion : { $sum: "$pop"}
+		}	
+	},  
+	{ $sort : {poblacion : -1} <!-- ordenacion desdecendente -->
+	},
+	{$skip:2},{$limit:4}	
+]	)
+
+<!-- Es importante el orden de los operadores -->
+db.zips.aggregate ( [
+	{$match : {state : "TX"} }, <!-- Filtro para trabajar solo con un estado -->
+	{
+		$group : {
+			_id : "$city",
+			poblacion : { $sum: "$pop"}
+		}	
+	},  
+	poblacion : { $sum: "$pop"} <!-- ordenacion desdecendente -->
+	},
+	{$limit:4},{$skip:2}
+		
+]	)
+
+
+5.12 Operadores $first, $last
+=================================================================================
+db.zips.aggregate ( [ 
+	{  
+		$group : {  
+			_id : {
+				estado : "$state" ,  
+				ciudad : "$city"  
+			} ,
+			poblacion : { $sum: "$pop"}
+	
+		}
+	} , 
+	{ $sort : {"_id.estado":1 , "poblacion" : -1} },<!-- si no se ordena el resultado es totalmente imprivisible -->
+	{
+		$group : {
+			_id : "$_id.estado",
+			ciudad : { $first: "$_id.ciudad"},
+			población : {$first: "$poblacion"}<!-- Al coger el primero, por la ordenacion, cojo el más poblado-->
+		}	
+	} ]	)
+
+	
+	
+5.12 Operador $geoNear
+=================================================================================
+db.zips.aggregate ( [ 
+	{<!-- Siempre primera etapa, filtro por la distacnia a un punto -->
+		$geoNear : {
+			near : [-84,36], <!-- Buscar puntos cercanos a este -->
+			distanceField : "distancia",<!-- Nombre del campo a la que asignara la distacia al punto -->
+			maxDistance : 0.5,<!-- como máximo a 0.5 grados -->
+			limit: 100000<!-- Cambiado limite por defecto -->
+		}
+	},
+	{<!-- Los que pasan el filtro calculo la suma de la población -->
+		$group : {  
+			_id : {
+				estado : "$state" ,  
+				ciudad : "$city"  
+			} ,
+			poblacion : { $sum: "$pop"}
+	
+		}
+	}
+] )
+
+Da un error al no tener indices: \"no geo indices for geoNear\"
+
+db.zips.getIndexes() --> Veo los indices
+
+db.zips.ensureIndex ({loc : "2d"})
+
+y vuelvo a ejecutar

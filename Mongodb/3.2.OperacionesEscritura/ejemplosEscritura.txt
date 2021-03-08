@@ -1,0 +1,338 @@
+1. Cargar fichero cargaGimnasioEscritura.js
+load ("/ejemplos/3.2.OperacionesEscritura/cargaGimnasioEscritura.js")
+3.2.1 Actualizacion sustitutiva
+=======================================================================
+>var cliente = db.gimnasioescritura.findOne();<!-- no usar find({idCliente:1}), devuelve cursor -->
+>cliente.fechaAlta = new Date()
+>cliente
+<!-- habrá modificado la fecha de ese cliente en la variable -->
+
+db.gimnasioescritura.update({idCliente:1},cliente) <!--elimina y crea un nuevo documento -->
+
+3.2.2 Actualizacion modificativa
+=======================================================================
+db.gimnasioescritura.update({idCliente:1}, {$set: {fechaAlta : new Date()}})
+
+db.gimnasioescritura.update({idCliente:1}, {$set: {fechaAlta : new Date(), preferencias : ["Tenis"]}})
+
+db.gimnasioescritura.update({idCliente:1}, {$set: {nuevoCampo : 1}})
+
+3.2.3 Operadores $inc $unset $rename
+=======================================================================
+db.gimnasioescritura.update({idCliente:1}, {$inc: {nuevoCampo : 2}}) <!-- incrementa el valor del campo indicado el numero de veces que se le pasa -->
+
+db.gimnasioescritura.update({idCliente:1}, {$unset: {nuevoCampo : ""}})<!-- eliminamos el campo -->
+
+db.gimnasioescritura.update({idCliente:1}, {$inc: {nuevoCampo : 2}})
+
+db.gimnasioescritura.update({idCliente:1}, {$rename: {nuevoCampo : "otroCampo"}})
+
+3.2.4 Operadores $mul $bit $min $max $currentDate
+=======================================================================
+db.gimnasioescritura.update(
+	{idCliente:1}, 
+	{$mul: {horasSemanales : 1.1}}) <!-- Nuevo campo, lo genera con valor 0 -->
+
+db.gimnasioescritura.update(
+	{idCliente:1}, 
+	{$set: {horasSemanales : 10}})
+
+db.gimnasioescritura.update(
+	{idCliente:1}, 
+	{$mul: {horasSemanales : 1.1}})
+	
+
+db.gimnasioescritura.update(
+	{idCliente:1},
+	{$max : {horasSemanales:10}}
+)
+
+<!-- actualiza a 10 ya que 10>0 -->
+db.gimnasioescritura.update(
+	{idCliente:1},
+	{$max : {horasSemanales:8}}
+)
+<!-- no actualiza 8<10 -->
+db.gimnasioescritura.update(
+	{idCliente:1},
+	{$min : {horasSemanales:8}}
+)
+<!-- actualiza a 8 ya que 8<10 -->
+
+db.gimnasioescritura.update(
+	{idCliente:1},
+	{$max : {horasSemanales:20}}
+)
+<!-- actualiza a 20 -->
+
+db.gimnasioescritura.update(
+	{idCliente:1},
+	{$currentDate : {fechaAlta:true}}<!-- actualiza la fecha en el campo -->
+)
+
+db.gimnasioescritura.update(
+	{idCliente:1},
+	{$currentDate : {fechaAlta:{$type: "date"}}}<!-- actualiza la fecha con hora, dia,... -->
+)
+
+db.gimnasioescritura.update(
+	{idCliente:1},
+	{$currentDate : {fechaAlta:{$type: "timestamp"}}}<!-- actualiza la fecha con segundos transcurridos desde 1 ene 1970  -->
+)
+
+
+
+3.2.5 Modificar campos arrays
+=======================================================================
+<!-- añade elemento al final del array aunque exista -->
+db.gimnasioescritura.update(
+	{idCliente:1},
+	{$push : {preferencias : "Padel"} }
+)
+
+<!-- añade elementos a un array si no existe -->
+db.gimnasioescritura.update(
+	{idCliente:1},
+	{$addToSet : {preferencias : "Padel"} }
+)
+<!-- elimina el primer elemento del array -->
+db.gimnasioescritura.update(
+	{idCliente:1},
+	{$pop : {preferencias : -1} }
+)
+<!-- elimina el ultimo elemento del array -->
+db.gimnasioescritura.update(
+	{idCliente:1},
+	{$pop : {preferencias : 1} }
+)
+
+<!-- añade elementos al final del array aunque exista -->
+<!-- no recomendable usar ya -->
+db.gimnasioescritura.update(
+	{idCliente:1},
+	{$pushAll : {preferencias : ["Padel","Tenis"]} }
+)
+<!-- añade elementos al final del array aunque exista -->
+<!-- Desde version 2.6 forma recomendada -->
+db.gimnasioescritura.update(
+	{idCliente:1},
+	{$push : 
+		{preferencias : 
+			{$each : ["Aquagym","Natación"]} 
+		}
+	}
+)
+
+db.gimnasioescritura.update(
+	{idCliente:1},
+	{$addToSet : 
+		{preferencias : 
+			{$each : ["Aquagym","Natación"]} 
+		}
+	}
+)
+
+
+<!-- Quitar elementos -->
+db.gimnasioescritura.update(
+	{idCliente:1},
+	{$pullAll : {preferencias : ["Padel","Tenis"]} }<!--Array con los elementos que queremos quitar-->
+)
+
+db.gimnasioescritura.update(
+	{idCliente:1},
+	{$pull : 
+		{preferencias : 
+			{$in : ["Padel","Tenis"]}<!-- Elementos que cumplan esta condicion, si hubiera numeros $gt ... -->
+		} }
+)
+
+
+<!-- Mantener una parte del array y eliminar el resto -->
+db.gimnasioescritura.update(
+	{idCliente:1},
+	{$push : 
+		{preferencias : {
+				$each : ["Aquagym","Natación"],
+				$slice : -3 <!--Quedate con los 3 ultimos -->
+			} 
+		}
+	}
+)
+
+<!-- Si quiero mostrar los 2 primeros pero sin añadir,
+no puedo quitar each, ya que slice va siempre asociado a each. Dejo each vacio -->
+db.gimnasioescritura.update(
+	{idCliente:1},
+	{$push : 
+		{preferencias : {
+				$each : [],
+				$slice : 2 
+			} 
+		}
+	}
+)
+
+<!--operador sort -->
+db.gimnasioescritura.update(
+	{idCliente:3},
+	{
+		$push : 
+		{
+			preferencias : {
+				$each : [],
+				$sort : 1
+			} 
+		}
+	}
+)
+
+2. Cargar fichero cargaPuntuaciones3.js
+load ("/ejemplos/3.2.OperacionesEscritura/cargaPuntuaciones3.js")
+<!-- Ahora trabajamos con documentos -->
+db.puntuaciones3.update(
+	{idEstudiante:1},
+	{
+		$push : 
+		{
+			puntuaciones : {
+				$each : [],
+				$sort : { puntuacion : 1}
+			} 
+		}
+	}
+)
+
+<!--operador position -->
+<!-- en vez de meter los valores al final los inserta a partir de la posicion que le indiquemos-->
+db.gimnasioescritura.update(
+	{idCliente:3},
+	{
+		$push : 
+		{
+			preferencias : {
+				$each : ["Natación","Futbol"],
+				$position : 1 
+			} 
+		}
+	}
+)
+
+db.gimnasioescritura.update(
+	{idCliente:3},
+	{
+		$push : 
+		{
+			preferencias : {
+				$each : ["Natación","Futbol"],
+				$position : 1 ,
+				$slice : 3 ,
+				$sort : 1 
+			} 
+		}
+	}
+)
+
+
+<!-- Operador $ -->
+<!-- Busco clientes que tengan Spinning -->
+db.gimnasioescritura.find({preferencias : "Spinning"},{idCliente:1,_id:0})
+db.gimnasioescritura.update(
+	{idCliente:3, preferencias : "Spinning" }, 
+	{$set: 
+		{"preferencias.$" : "Bicicleta estática"}<!--primera ocurrencia que cumpla la condicion -->
+	}
+)
+
+<!-- Si se sabe la posicion que se quiere modificar (y siempre esté en esa posicion) se puede sustituir el $ por la posicion -->
+db.gimnasioescritura.update(
+	{idCliente:3 }, 
+	{$set: 
+		{"preferencias.2" : "Bicicleta estática"}<!--actualiza posición indicada -->
+	}
+)
+
+db.puntuaciones3.find({idEstudiante:1})
+db.puntuaciones3.update(
+	{idEstudiante:1, "puntuaciones.puntuacion" : {$gt : 90} }, 
+	{$set: 
+		{"puntuaciones.$.excelente" : true}<!--añade nuevo campo, solo al primero que encuentra -->
+	}
+)
+
+
+
+3.2.5 Upsert
+=======================================================================
+db.gimnasioescritura.count();
+db.gimnasioescritura.update(<!--Actualizo documento que no existe -->
+	{idCliente:501 }, 
+	{$set: {fechaAlta : new Date()} }
+)
+
+db.gimnasioescritura.update(<!--Actualizo documento que no existe -->
+	{idCliente:501 }, 
+	{$set: {fechaAlta : new Date()} },
+	{ upsert :true }<!-- si no existe que lo inserte -->
+)
+<!-- Que datos mete ??? -->
+db.gimnasioescritura.find({idCliente:501})
+
+
+3.2.6 Actualizacion multiple
+===========================================================
+db.gimnasioescritura.update(
+	{preferencias: {$all : ["Aquagym","Natación"] } }, 
+	{$set: {regalo : "Gorro"} },
+	{ multi :true }<!-- Para que no solo actualice al primero que encuentra -->
+)
+db.gimnasioescritura.find({preferencias: {$all: ["Aquagym","Natación"]}}).pretty()
+
+=============================================================
+Ejercicio 1 
+=============================================================
+1. Importar  los datos de un archivo (ejercicioDatosImportar.json) en la coleccion ejerciciogimansio. 
+2. Añadir la preferencia Carrera en cinta a todos los clientes que aún no la tengan, y que si que tengan entre las suyas el Spinning y la Elíptica. Cómo comprobación antes de hacer el cambio 128 clientes tienen la Carrera en cinta entre sus preferencias.
+¿Cuántos clientes tienen la Carrera en cinta entre sus preferencias tras el cambio realizado?
+
+
+
+=============================================================
+Ejercicio 2
+=============================================================
+1. Importar  los datos de un archivo (ejercicio2DatosImportar.json) en la coleccion ejercicio2gimansio. 
+2. Eliminar documentos, que contiene datosImportar.json. A continuación, hay que eliminar todos los clientes que tengan entre sus preferencias el Spinning y la Elíptica. Inicialmente hay 500 clientes.
+
+¿Cuántos clientes quedan tras el cambio realizado?
+
+
+
+
+
+3.2.7 FindAndModify
+===========================================================
+db.tareas.insert ( {tarea:"Comprar Leche" , fecha : ISODate ("2016-10-16T10:00:00.000Z")} )
+db.tareas.insert ( {tarea:"Ir al banco" , fecha : ISODate ("2016-10-27T10:00:00.000Z")} )
+db.tareas.insert ( {tarea:"Curso mongoDB" , fecha : ISODate ("2016-10-05T09:00:00.000Z")} )
+db.tareas.insert ( {tarea:"Reunion Cliente" , fecha : ISODate ("2016-11-16T12:30:00.000Z")} )
+db.tareas.insert ( {tarea:"Reunion Cliente 2" , fecha : ISODate ("2016-11-18T10:30:00.000Z")} )
+
+<!-- Recuperamos la tarea que nos queda menos tiempo y eliminarla -->
+db.tareas.findAndModify({
+	sort : {fecha :1},
+	remove : true
+})
+
+
+db.tareas.findAndModify({
+	query : {estado :null},
+	sort : {fecha :1},
+	update : {
+		$set: {
+			estado : "En proceso"
+		}
+	}
+})
+
+
+

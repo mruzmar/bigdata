@@ -2,15 +2,15 @@
 
 wget https://raw.githubusercontent.com/mruzmar/bigdata/master/Pig/atletas.csv
 
-hdfs dfs -mkdir /home
-hdfs dfs -put atletas.csv /home
+hdfs dfs -mkdir -p /datalake/jjoo
+hdfs dfs -put atletas.csv /datalake/jjoo
+
+# Accedemos al shell de PIG
 pig
+# Debe aparecer grunt>
 
 # cargamos en la variable atletas los contenidos del fichero
-atletas = LOAD '/home/atletas.csv' USING org.apache.pig.piggybank.storage.CSVExcelStorage(',','YES_MULTILINE','NOCHANGE','SKIP_INPUT_HEADER') as (atleta:chararray,pais:chararray,deporte:chararray,oro:int,plata:int,bronce:int,total:int);
-
-# Mostramos por pantalla resultados
-DUMP atletas_limit;
+atletas = LOAD '/datalake/jjoo/atletas.csv' USING org.apache.pig.piggybank.storage.CSVExcelStorage(',','YES_MULTILINE','NOCHANGE','SKIP_INPUT_HEADER') as (atleta:chararray,pais:chararray,deporte:chararray,oro:int,plata:int,bronce:int,total:int);
 
 
 # establecemos un límite
@@ -19,10 +19,13 @@ atletas_limit = LIMIT atletas 10;
 # Mostramos por pantalla resultados
 DUMP atletas_limit;
 
+# Qué query sería similar en SQL ??
+
 # Hacemos agrupación
 atletas_group_pais = GROUP atletas BY pais;
 
 # Ejecución paso a paso
+# The illustrate operator gives you the step-by-step execution of a sequence of statements.
 ILLUSTRATE atletas_group_pais;
 
 
