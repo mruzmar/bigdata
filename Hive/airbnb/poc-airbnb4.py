@@ -23,6 +23,7 @@ import os
 # Imports the Google Cloud client library
 # conda install -c conda-forge google-cloud-vision
 # Imports the Google Cloud client library
+# https://cloud.google.com/vision/docs/quickstart-client-libraries
 # Hay que hacer en Linux 
 # export GOOGLE_APPLICATION_CREDENTIALS="/home/template/work-bigdata/Proyecto EAE-517b6a6a592f.json"
 from google.cloud import vision
