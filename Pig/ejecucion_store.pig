@@ -5,24 +5,3 @@ atletas = LOAD '/datalake/jjoo/atletas.csv' USING org.apache.pig.piggybank.stora
 atletas_limit = LIMIT atletas 10;
 
 STORE atletas_limit INTO '/datalake/jjoo/resultados/limit_atletas10';
-
-# Pregunta de examen
-# ¿cómo comprobarías los resultados?
-# 
-#
-# Pista: hdfs
-# 
-
-
-
-
-
-
-
-
-
-
-
-
-# hdfs dfs -cat /datalake/jjoo/resultados/limit_atletas10/part-r-00000
-# Resultado similar a MR
