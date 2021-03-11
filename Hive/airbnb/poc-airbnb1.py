@@ -28,4 +28,3 @@ cmd="wget https://github.com/mruzmar/bigdata/raw/master/Hive/airbnb/listings_air
 print ("Ejecutando "+cmd)
 subprocess.call(cmd, shell=True)
 
-

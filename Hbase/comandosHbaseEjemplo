@@ -3,16 +3,16 @@
 
 
 # Creación de tabla introduciendo nombre y el nombre de la columna 
-create 'tabla_hbase', 'cf_1'
+create 'tabla_hbase', 'Office'
 list
 describe 'tabla_hbase'
 scan 'tabla_hbase'
-put 'tabla_hbase', 'fila_1', 'cf_1:columna_1', '11'
-put 'tabla_hbase', 'fila_2', 'cf_1:columna_1', '21'
-put 'tabla_hbase', 'fila_3', 'cf_1:columna_1', '31'
-put 'tabla_hbase', 'fila_4', 'cf_1:columna_1', '41'
-put 'tabla_hbase', 'fila_4', 'cf_1:columna_2', '42'
-put 'tabla_hbase', 'fila_4', 'cf_1:columna_3', '43'
+put 'tabla_hbase', 'SP', 'office:Madrid', '10.000.000'
+put 'tabla_hbase', 'UK', 'Office:London', '21.000.000'
+put 'tabla_hbase', 'GER', 'Office:Hamburgo', '31.000.000'
+put 'tabla_hbase', 'IT', 'Office:Roma', '41.000.000'
+put 'tabla_hbase', 'IT', 'Office:Milano', '42.000.000'
+put 'tabla_hbase', 'IT', 'Office:Venecia', '43.000.000'
 count 'tabla_hbase'
 scan 'tabla_hbase'
 get 'tabla_hbase', 'fila_1'
@@ -21,15 +21,15 @@ alter 'tabla_hbase', 'cf_2'
 describe 'tabla_hbase'
 alter 'tabla_hbase', 'delete'=>'cf_2'
 describe 'tabla_hbase'
-alter 'tabla_hbase', NAME=>'cf_1', VERSIONS=>5
+alter 'tabla_hbase', NAME=>'Office', VERSIONS=>5
 describe 'tabla_hbase'
-put 'tabla_hbase', 'fila_1', 'cf_1:columna_1', '1100'
-put 'tabla_hbase', 'fila_2', 'cf_1:columna_1', '2100'
-put 'tabla_hbase', 'fila_3', 'cf_1:columna_1', '3100'
+put 'tabla_hbase', 'fila_1', 'Office:columna_1', '1100'
+put 'tabla_hbase', 'fila_2', 'Office:columna_1', '2100'
+put 'tabla_hbase', 'fila_3', 'Office:columna_1', '3100'
 get 'tabla_hbase', 'fila_1'
 get 'tabla_hbase', 'fila_2'
 get 'tabla_hbase', 'fila_4' 
-scan 'tabla_hbase', { COLUMNS => ['cf_1:columna_1', 'cf_1:columna_3'] }
+scan 'tabla_hbase', { COLUMNS => ['Office:columna_1', 'Office:columna_3'] }
 disable 'tabla_hbase'
 drop 'tabla_hbase'
 exit

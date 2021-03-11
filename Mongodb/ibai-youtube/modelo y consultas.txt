@@ -1,0 +1,78 @@
+{
+	url: "https://www.youtube.com/channel/UCaY_-ksFSQtTGk0y1HA_3YQ",
+	nombre: "ibai",
+	suscriptores: 5430000,
+	logo: "ibai.jpg",
+	videos: [
+		{
+			video_id:1,
+			titulo:"No debí haber contado....",
+			visualizaciones:585499,
+			url_video:"https://youtube.com/video1.mpg",
+			fecha_publicacion: ISODate("2021-03-15T03:04:00Z")
+		},
+		{
+			video_id:1,
+			titulo:"No debí haber contado....",
+			visualizaciones:585499,
+			url_video:"https://youtube.com/video1.mpg",
+			fecha_publicacion: ISODate("2021-03-15T03:04:00Z")
+		}	
+
+	],
+	listas_de_reproduccion:[
+	{
+		nombre:"gartic phone",
+		fecha_actualizacion: ISODate("2021-03-15T03:04:00Z")
+	},
+	{
+		nombre:"Cosas que no sabias hace 5 minutos",
+		fecha_actualizacion: ISODate("2021-03-15T03:04:00Z")
+	}	
+	]
+}
+
+
+
+db.youtube_usuarios.insert ( 
+{
+	url: "https://www.youtube.com/channel/UCaY_-ksFSQtTGk0y1HA_3YQ",
+	nombre: "ibai",
+	suscriptores: 5430000,
+	logo: "ibai.jpg",
+	videos: [
+		{
+			video_id:1,
+			titulo:"No debí haber contado....",
+			visualizaciones:585499,
+			url_video:"https://youtube.com/video1.mpg",
+			fecha_publicacion: ISODate("2021-03-15T03:04:00Z")
+		},
+		{
+			video_id:1,
+			titulo:"No debí haber contado....",
+			visualizaciones:585499,
+			url_video:"https://youtube.com/video1.mpg",
+			fecha_publicacion: ISODate("2021-03-15T03:04:00Z")
+		}	
+
+	],
+	listas_de_reproduccion:[
+	{
+		nombre:"gartic phone",
+		fecha_actualizacion: ISODate("2021-03-15T03:04:00Z")
+	},
+	{
+		nombre:"Cosas que no sabias hace 5 minutos",
+		fecha_actualizacion: ISODate("2021-03-15T03:04:00Z")
+	}	
+	]
+}
+)
+
+db.youtube_usuarios.find()
+
+db.youtube_usuarios.find({nombre:"iba"})
+
+db.youtube_usuarios.find({url:"https://www.youtube.com/channel/UCaY_-ksFSQtTGk0y1HA_3YQ"})
+
