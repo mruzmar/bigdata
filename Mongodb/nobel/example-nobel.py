@@ -13,3 +13,22 @@ for collection_name in ["prizes","laureates"]:
 	# Convertimos los datos a Json
 	documentos = response.json()[collection_name]
 	db[collection_name].insert_many(documentos)
+
+
+db = cliente ["nobel"]
+prizes_collection = db["prizes"]
+
+
+
+# Filtro a realizar en la consulta
+filter = {}
+
+# Conteo de documentos en una colección
+
+num_prizes = db.prizes.count_documents(filter)
+
+num_laureates = db.laureates.count_documents(filter)
+
+# Seleccionamos un documento
+
+doc = db.prizes.find_one(filter)	
